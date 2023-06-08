@@ -1,10 +1,11 @@
 2a60927148abd1d33b818b535e306557
-::res://::1686196271
+::res://::1686197403
 icon.svg::CompressedTexture2D::3604967623761785578::1684971234::1686101989::1::::<><>::
-map.tscn::PackedScene::1639134538609314474::1686101993::0::1::::<><>::uid://cexpgp51nbv2o<>uid://dpsk87sqm2jr2
+map.tscn::PackedScene::1639134538609314474::1686196906::0::1::::<><>::
 Player.gd::GDScript::-1::1684971234::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::8249921315647150233::1686101993::0::1::::<><>::res://Player.gd<>uid://daqagidjpsmge
+Player.tscn::PackedScene::8249921315647150233::1686197376::0::1::::<><>::res://Player.gd<>uid://daqagidjpsmge
 README.md::TextFile::-1::1686102064::0::1::::<><>::
-::res://gameArt/::1686102079
-Fox.png::CompressedTexture2D::7192303235158588768::1684971234::1684971234::1::::<><>::
-Tileset.png::CompressedTexture2D::5101999735329775376::1684971234::1684971234::1::::<><>::
+::res://GameAssets/::1686197403
+Fox.png::CompressedTexture2D::7192303235158588768::1684971234::1686197376::1::::<><>::
+roverplacehold.dae::PackedScene::8192465395467428584::1686197399::1686197403::1::::<><>::
+Tileset.png::CompressedTexture2D::5101999735329775376::1684971234::1686197376::1::::<><>::

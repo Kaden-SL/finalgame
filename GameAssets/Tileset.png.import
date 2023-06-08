@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daqagidjpsmge"
-path="res://.godot/imported/Fox.png-39c67a6b057b4112a83cbed49d6a7293.ctex"
+uid="uid://cexpgp51nbv2o"
+path="res://.godot/imported/Tileset.png-544b8078a9fc512e07b583cef6d765a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameArt/Fox.png"
-dest_files=["res://.godot/imported/Fox.png-39c67a6b057b4112a83cbed49d6a7293.ctex"]
+source_file="res://GameAssets/Tileset.png"
+dest_files=["res://.godot/imported/Tileset.png-544b8078a9fc512e07b583cef6d765a3.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
