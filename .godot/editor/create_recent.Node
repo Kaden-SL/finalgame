@@ -1,4 +1,5 @@
 Camera3D
-Node
+Node3D
 CollisionShape3D
 CharacterBody3D
+Node
