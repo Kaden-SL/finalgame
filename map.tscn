@@ -1,29 +1,3 @@
-[gd_scene load_steps=5 format=3 uid="uid://xmakoftynuco"]
+[gd_scene format=3 uid="uid://xmakoftynuco"]
 
-[ext_resource type="Script" path="res://palyer.gd" id="1_wng38"]
-[ext_resource type="PackedScene" uid="uid://doyqycukrkcq7" path="res://GameAssets/roverplacehold.dae" id="2_huqoc"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ipxsc"]
-size = Vector3(1.21172, 1, 1)
-
-[sub_resource type="Environment" id="Environment_dcep5"]
-ambient_light_color = Color(1, 0.905882, 0.937255, 1)
-
-[node name="CharacterBody3D" type="CharacterBody3D"]
-script = ExtResource("1_wng38")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106596, 0, 0)
-shape = SubResource("BoxShape3D_ipxsc")
-
-[node name="Cam Base" type="Node3D" parent="."]
-
-[node name="Camera3D" type="Camera3D" parent="Cam Base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.38686)
-environment = SubResource("Environment_dcep5")
-current = true
-
-[node name="graphics" parent="." instance=ExtResource("2_huqoc")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.542495, 0)
-
-[editable path="graphics"]
+[node name="Node3D" type="Node3D"]
