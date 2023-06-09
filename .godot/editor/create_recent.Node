@@ -1,3 +1,7 @@
+Sprite2D
+Sprite3D
+ParallaxLayer
+ParallaxBackground
 MeshInstance3D
 DirectionalLight3D
 Camera3D
