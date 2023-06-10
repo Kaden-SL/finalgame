@@ -11,14 +11,18 @@ config_version=5
 [application]
 
 config/name="ARG120GAMEPROJECT"
-run/main_scene="res://Map3d.tscn"
+run/main_scene="res://scenes/Map3d.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
+[dotnet]
+
+project/assembly_name="ARG120GAMEPROJECT"
 
 [rendering]
 

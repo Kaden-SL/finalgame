@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dgxgml0ql3st1"]
+
+[node name="overworldMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hibernateButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="uploadButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="downloadButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="quitButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="minigameStartButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="textSwitch" type="CheckButton" parent="."]
+offset_right = 44.0
+offset_bottom = 24.0
+
+[node name="textBox" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="statsText" type="TextEdit" parent="textBox"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="volumeSlider" type="HSlider" parent="textBox"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="fullscreenToggle" type="Button" parent="textBox"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
