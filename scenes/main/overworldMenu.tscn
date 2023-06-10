@@ -179,4 +179,5 @@ text = "aaaaa"
 [connection signal="pressed" from="minigameStartButton" to="." method="_on_minigame_start_button_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="toggled" from="settingsToggle" to="." method="_on_settings_toggle_toggled"]
+[connection signal="pressed" from="textBox/settings/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
 [connection signal="value_changed" from="textBox/settings/HSlider" to="." method="_on_h_slider_value_changed"]
