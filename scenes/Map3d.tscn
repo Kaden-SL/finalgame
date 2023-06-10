@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="1_skmp1"]
 
-
 [sub_resource type="BoxMesh" id="BoxMesh_g6dcw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0am80"]
