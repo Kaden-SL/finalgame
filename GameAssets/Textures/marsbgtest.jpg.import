@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chaa5pqvil8ry"
-path.s3tc="res://.godot/imported/marsbgtest.jpg-381425b1e49e92ba6ea3c001771c7678.s3tc.ctex"
+path.s3tc="res://.godot/imported/marsbgtest.jpg-2db720f9c4ed7c2b4b7a2dec789db2df.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://GameAssets/marsbgtest.jpg"
-dest_files=["res://.godot/imported/marsbgtest.jpg-381425b1e49e92ba6ea3c001771c7678.s3tc.ctex"]
+source_file="res://GameAssets/Textures/marsbgtest.jpg"
+dest_files=["res://.godot/imported/marsbgtest.jpg-2db720f9c4ed7c2b4b7a2dec789db2df.s3tc.ctex"]
 
 [params]
 

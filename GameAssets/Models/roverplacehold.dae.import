@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://doyqycukrkcq7"
-path="res://.godot/imported/roverplacehold.dae-582ff103cb2b8fb325820df41d91b830.scn"
+path="res://.godot/imported/roverplacehold.dae-180a1f20cb6c342f085f92e36b15e1f3.scn"
 
 [deps]
 
-source_file="res://GameAssets/roverplacehold.dae"
-dest_files=["res://.godot/imported/roverplacehold.dae-582ff103cb2b8fb325820df41d91b830.scn"]
+source_file="res://GameAssets/Models/roverplacehold.dae"
+dest_files=["res://.godot/imported/roverplacehold.dae-180a1f20cb6c342f085f92e36b15e1f3.scn"]
 
 [params]
 

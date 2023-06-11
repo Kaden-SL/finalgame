@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://buco8vr0aqqx3"]
+[gd_scene load_steps=6 format=3 uid="uid://buco8vr0aqqx3"]
 
-[ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="1_skmp1"]
+[ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://Player3d.tscn" id="1_skmp1"]
+[ext_resource type="Texture2D" uid="uid://chaa5pqvil8ry" path="res://GameAssets/marsbgtest.jpg" id="2_1ockm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g6dcw"]
 
@@ -26,3 +27,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_0am80")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_3c2p6")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.61118)
+texture = ExtResource("2_1ockm")
