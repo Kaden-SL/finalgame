@@ -19,6 +19,13 @@ offset_right = 576.0
 offset_bottom = 768.0
 color = Color(0.556863, 0.796078, 0.996078, 0.588235)
 
+[node name="overlay" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1600.0
+offset_bottom = 904.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.196078)
+
 [node name="tool1Button" type="Button" parent="."]
 z_index = 1
 layout_mode = 0

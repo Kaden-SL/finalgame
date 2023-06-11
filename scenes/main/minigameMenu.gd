@@ -4,6 +4,8 @@ extends Control
 
 @export var toolID = 0
 
+signal minigameAbort;
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -40,10 +42,7 @@ func _on_tool_3_button_pressed():
 
 
 func _on_quit_button_pressed():
-	#if there is an exit cinematic, show that
-	#reset all data and whatever
-	#return to main menu
-	pass
+	minigameAbort.emit()
 
 
 

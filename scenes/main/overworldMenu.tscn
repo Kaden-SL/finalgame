@@ -11,6 +11,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0kc1m")
 
+[node name="overlay" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 904.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.196078)
+
 [node name="menuBG" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 128.0

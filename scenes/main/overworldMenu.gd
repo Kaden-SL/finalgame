@@ -12,13 +12,12 @@ const buttonStrings = ["Upload\nData",
 @export var textMode = true;
 
 signal unpause;
+signal minigameStart;
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#pause all 3d game functions
-	
 	#set volume label to actual volume value
 	#if node within range
 		#$minigameStartButton.disabled = false
@@ -62,9 +61,7 @@ func _on_hibernate_button_pressed():
 
 
 func _on_minigame_start_button_pressed():
-	#if there is a node within range
-		#start a random minigame
-	pass # Replace with function body.
+	minigameStart.emit();
 
 
 

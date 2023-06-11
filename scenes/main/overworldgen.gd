@@ -19,7 +19,36 @@ func _ready():
 
 
 
-#func _physics_process(delta):
+func _physics_process(delta):
 #	if Input.is_action_just_pressed("ui_right"):
 #		print("fuck")
+	#opens the menu or closes it if the esc key is hit
+	if Input.is_action_just_pressed("menuButton"):
+		_on_character_body_3d_pressed()
 
+
+
+func _on_character_body_3d_pressed():
+	if !$overworldMenu.visible:
+		#pause the 3d game [placeholder]
+		$overworldMenu.visible = true
+	else:
+		$overworldMenu.visible = false
+		_on_overworld_menu_unpause()
+
+
+func _on_overworld_menu_unpause():
+	#unpause the 3d game [placeholder]
+	pass # Replace with function body.
+
+
+func _on_overworld_menu_minigame_start():
+	#make the current minigame area unusable/delete/whatever [placeholder]
+	$overworldMenu.visible = false
+	$minigameMenu.visible = true
+	#add the minigame
+
+
+func _on_minigame_menu_minigame_abort():
+	$minigameMenu.visible = false
+	$overworldMenu.visible = true

@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcq4awtwaie88"]
 
 [ext_resource type="Script" path="res://scenes/subscenes/player/palyer.gd" id="1_efwda"]
-[ext_resource type="PackedScene" uid="uid://doyqycukrkcq7" path="res://GameAssets/roverplacehold.dae" id="2_wmgnu"]
-
+[ext_resource type="PackedScene" uid="uid://doyqycukrkcq7" path="res://GameAssets/Models/roverplacehold.dae" id="2_wmgnu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ipxsc"]
 size = Vector3(1.21172, 1, 1)
@@ -26,5 +25,22 @@ current = true
 
 [node name="graphics" parent="." instance=ExtResource("2_wmgnu")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.542495, 0)
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -70.0
+offset_right = 110.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 
 [editable path="graphics"]

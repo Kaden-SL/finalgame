@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5vursst8mxjj"]
+[gd_scene load_steps=7 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Texture2D" uid="uid://chaa5pqvil8ry" path="res://GameAssets/Textures/marsbgtest.jpg" id="1_a3jgl"]
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="2_rt8it"]
 [ext_resource type="MeshLibrary" uid="uid://ha0848fjfaro" path="res://GameAssets/GridMaps/2test.tres" id="4_gp0hy"]
+[ext_resource type="PackedScene" uid="uid://bgxqr2cd6r4en" path="res://scenes/main/minigameMenu.tscn" id="5_bi56e"]
+[ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 
 [node name="main" type="Node3D"]
 script = ExtResource("1_x0rrk")
@@ -28,3 +30,14 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 scale = Vector2(0.41092, 0.395408)
 texture_normal = ExtResource("1_a3jgl")
 action = "right"
+
+[node name="minigameMenu" parent="." instance=ExtResource("5_bi56e")]
+visible = false
+
+[node name="overworldMenu" parent="." instance=ExtResource("6_gikdm")]
+visible = false
+
+[connection signal="pressed" from="CharacterBody3D" to="." method="_on_character_body_3d_pressed"]
+[connection signal="minigameAbort" from="minigameMenu" to="." method="_on_minigame_menu_minigame_abort"]
+[connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
+[connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
