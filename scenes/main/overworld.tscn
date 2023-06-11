@@ -1,15 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc7l7i78ktpvu"]
+[gd_scene load_steps=4 format=3 uid="uid://bc7l7i78ktpvu"]
 
 [ext_resource type="Texture2D" uid="uid://chaa5pqvil8ry" path="res://GameAssets/Textures/marsbgtest.jpg" id="2_1l6uh"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Scenes/Rover.tscn" id="2_vukdr"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_jf0eo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asww0"]
-albedo_color = Color(0.54902, 0.227451, 0.207843, 1)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_57awu"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[ext_resource type="MeshLibrary" uid="uid://duoxg1mdo2lbj" path="res://GameAssets/Models/raw4.tres" id="3_3bkrw"]
 
 [node name="main" type="Node3D"]
 
@@ -17,18 +10,14 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0.637249, -0.597132, 0.487183, 0, 0, 0)
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(8.18771, 0, 0, 0, 0.555927, 0, 0, 0, 3.57204, 0, -0.901691, 0)
-mesh = SubResource("BoxMesh_jf0eo")
-surface_material_override/0 = SubResource("StandardMaterial3D_asww0")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_57awu")
-
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.61118)
 texture = ExtResource("2_1l6uh")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_vukdr")]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("3_3bkrw")
+data = {
+"cells": PackedInt32Array(2, 0, 1, 1, 1, 1, 2, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1)
+}
