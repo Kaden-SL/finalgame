@@ -65,11 +65,20 @@ text = "Collect Data"
 [node name="quitButton" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 288.0
-offset_top = 680.0
-offset_right = 416.0
-offset_bottom = 727.0
+offset_left = 384.0
+offset_top = 688.0
+offset_right = 512.0
+offset_bottom = 735.0
 text = "Quit to Title"
+
+[node name="closeButton" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 192.0
+offset_top = 688.0
+offset_right = 320.0
+offset_bottom = 736.0
+text = "Close Menu"
 
 [node name="settingsToggle" type="Button" parent="."]
 z_index = 1
@@ -83,6 +92,7 @@ button_pressed = true
 
 [node name="textSwitch" type="CheckButton" parent="settingsToggle"]
 z_index = 2
+layout_mode = 0
 offset_left = 88.0
 offset_top = 8.0
 offset_right = 136.0
@@ -178,6 +188,7 @@ text = "aaaaa"
 [connection signal="pressed" from="hibernateButton" to="." method="_on_hibernate_button_pressed"]
 [connection signal="pressed" from="minigameStartButton" to="." method="_on_minigame_start_button_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="closeButton" to="." method="_on_close_button_pressed"]
 [connection signal="toggled" from="settingsToggle" to="." method="_on_settings_toggle_toggled"]
 [connection signal="pressed" from="textBox/settings/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
 [connection signal="value_changed" from="textBox/settings/HSlider" to="." method="_on_h_slider_value_changed"]

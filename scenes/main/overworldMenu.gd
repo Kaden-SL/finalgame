@@ -11,6 +11,8 @@ const buttonStrings = ["Upload\nData",
 @export var uploading = false;
 @export var textMode = true;
 
+signal unpause;
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -99,3 +101,8 @@ func _on_fullscreen_toggle_pressed():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED);
 	else :
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED);
+
+
+func _on_close_button_pressed():
+	unpause.emit()
+	visible = false
