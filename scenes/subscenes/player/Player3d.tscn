@@ -10,6 +10,8 @@ size = Vector3(1.21172, 1, 1)
 ambient_light_color = Color(1, 0.905882, 0.937255, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+floor_stop_on_slope = false
+floor_max_angle = 0.349066
 script = ExtResource("1_efwda")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -26,8 +28,9 @@ current = true
 [node name="graphics" parent="." instance=ExtResource("2_wmgnu")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.542495, 0)
 
-[node name="Button" type="Button" parent="."]
+[node name="menuButton" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,6 +44,23 @@ grow_horizontal = 2
 grow_vertical = 2
 action_mode = 0
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="leftButton" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0)
+offset_right = 704.0
+offset_bottom = 896.0
+mouse_filter = 1
+
+[node name="rightButton" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0)
+offset_left = 896.0
+offset_right = 1600.0
+offset_bottom = 896.0
+mouse_filter = 1
+
+[connection signal="pressed" from="menuButton" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="leftButton" to="." method="_on_left_button_button_down"]
+[connection signal="button_up" from="leftButton" to="." method="_on_left_button_button_up"]
+[connection signal="button_down" from="rightButton" to="." method="_on_right_button_button_down"]
+[connection signal="button_up" from="rightButton" to="." method="_on_right_button_button_up"]
 
 [editable path="graphics"]

@@ -37,7 +37,32 @@ visible = false
 [node name="overworldMenu" parent="." instance=ExtResource("6_gikdm")]
 visible = false
 
+[node name="tutorialLabel1" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.5
+offset_top = -26.0
+offset_right = 270.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click the rover or press ESC to open the menu.
+Click the left or right side of the screen or use the arrow keys to move."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="initialTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="paused" from="." to="CharacterBody3D" method="_on_main_paused"]
+[connection signal="unpaused" from="." to="CharacterBody3D" method="_on_main_unpaused"]
 [connection signal="pressed" from="CharacterBody3D" to="." method="_on_character_body_3d_pressed"]
 [connection signal="minigameAbort" from="minigameMenu" to="." method="_on_minigame_menu_minigame_abort"]
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
+[connection signal="timeout" from="initialTimer" to="." method="_on_timer_timeout"]

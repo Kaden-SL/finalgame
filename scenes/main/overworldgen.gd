@@ -4,6 +4,11 @@ const dir = [Vector3.RIGHT,Vector3.LEFT]
 var grid_size=14
 var grid_steps= 50
 
+signal paused
+signal unpaused
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var startpose= Vector3(0,0,0)
@@ -22,7 +27,8 @@ func _ready():
 func _physics_process(delta):
 #	if Input.is_action_just_pressed("ui_right"):
 #		print("fuck")
-	#opens the menu or closes it if the esc key is hit
+	
+	#literally just what happens if you click the rover
 	if Input.is_action_just_pressed("menuButton"):
 		_on_character_body_3d_pressed()
 
@@ -30,16 +36,15 @@ func _physics_process(delta):
 
 func _on_character_body_3d_pressed():
 	if !$overworldMenu.visible:
-		#pause the 3d game [placeholder]
+		paused.emit()
 		$overworldMenu.visible = true
-	else:
+	else: #doesnt work when actually clicking, iunno
 		$overworldMenu.visible = false
 		_on_overworld_menu_unpause()
 
 
 func _on_overworld_menu_unpause():
-	#unpause the 3d game [placeholder]
-	pass # Replace with function body.
+	unpaused.emit()
 
 
 func _on_overworld_menu_minigame_start():
@@ -52,3 +57,7 @@ func _on_overworld_menu_minigame_start():
 func _on_minigame_menu_minigame_abort():
 	$minigameMenu.visible = false
 	$overworldMenu.visible = true
+
+
+func _on_timer_timeout():
+	$tutorialLabel1.visible = false
