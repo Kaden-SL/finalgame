@@ -16,6 +16,9 @@ func _ready():
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
 	print(mintime)
+
+
+
 #func _physics_process(delta):
 #	if Input.is_action_just_pressed("ui_right"):
 #		print("fuck")
