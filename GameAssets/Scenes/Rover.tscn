@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcq4awtwaie88"]
 
-[ext_resource type="PackedScene" uid="uid://doyqycukrkcq7" path="res://GameAssets/Models/roverplacehold.dae" id="2_wmgnu"]
+[ext_resource type="PackedScene" uid="uid://ce7dbtmcaibbk" path="res://GameAssets/Models/rover3.dae" id="2_cn0ob"]
 [ext_resource type="Script" path="res://GameAssets/Scenes/Rover.gd" id="3_ccr7o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ipxsc"]
@@ -23,10 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.17066)
 environment = SubResource("Environment_dcep5")
 current = true
 
-[node name="graphics" parent="." instance=ExtResource("2_wmgnu")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.542495, 0)
+[node name="Node3D" type="Node3D" parent="."]
 
-[node name="Camera" parent="graphics" index="7"]
-fov = 75.0
-
-[editable path="graphics"]
+[node name="rover3" parent="Node3D" instance=ExtResource("2_cn0ob")]
+transform = Transform3D(-1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0, -0.384148, 0)

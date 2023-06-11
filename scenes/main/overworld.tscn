@@ -18,7 +18,7 @@ transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(8.18771, 0, 0, 0, 0.555927, 0, 0, 0, 3.57204, 0, -0.91123, 0)
+transform = Transform3D(8.18771, 0, 0, 0, 0.555927, 0, 0, 0, 3.57204, 0, -0.901691, 0)
 mesh = SubResource("BoxMesh_jf0eo")
 surface_material_override/0 = SubResource("StandardMaterial3D_asww0")
 
