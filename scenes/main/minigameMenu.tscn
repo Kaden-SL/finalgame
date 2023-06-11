@@ -56,7 +56,7 @@ offset_left = 288.0
 offset_top = 680.0
 offset_right = 416.0
 offset_bottom = 727.0
-text = "Quit to Title"
+text = "Abort"
 
 [node name="settingsToggle" type="Button" parent="."]
 z_index = 1
