@@ -1,3 +1,101 @@
-[gd_scene format=3 uid="uid://rnjj4su20fdu"]
+[gd_scene load_steps=3 format=3 uid="uid://rnjj4su20fdu"]
+
+[ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kcgfi"]
+font_size = 35
 
 [node name="mainMenu" type="Node2D"]
+script = ExtResource("1_bly3b")
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="playButton" type="Button" parent="gui"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 608.0
+offset_right = 384.0
+offset_bottom = 672.0
+text = "Start Game"
+
+[node name="quitButton" type="Button" parent="gui"]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 608.0
+offset_right = 1408.0
+offset_bottom = 672.0
+text = "Exit Game"
+
+[node name="title" type="Label" parent="gui"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 960.0
+offset_bottom = 256.0
+text = "Martian Soliloquy"
+label_settings = SubResource("LabelSettings_kcgfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings" type="Control" parent="gui"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="volumeLabel" type="Label" parent="gui/settings"]
+z_index = 2
+layout_mode = 0
+offset_left = 741.0
+offset_top = 584.0
+offset_right = 854.0
+offset_bottom = 616.0
+text = "Volume : 100%"
+vertical_alignment = 1
+
+[node name="volumeBG" type="ColorRect" parent="gui/settings"]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 576.0
+offset_right = 976.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 0.490196)
+
+[node name="fullscreenToggle" type="Button" parent="gui/settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 704.0
+offset_top = 736.0
+offset_right = 896.0
+offset_bottom = 800.0
+text = "Toggle Fullscreen"
+
+[node name="HSlider" type="HSlider" parent="gui/settings"]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 624.0
+offset_right = 957.0
+offset_bottom = 656.0
+value = 75.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="gui"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 256.0
+offset_right = 1056.0
+offset_bottom = 320.0
+text = "A game by
+Kaden Sedmak-Locke, Jorge Gonzalez, Ellen Brannon, Chloe Liang"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="gui/playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="gui/quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="gui/settings/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
+[connection signal="value_changed" from="gui/settings/HSlider" to="." method="_on_h_slider_value_changed"]
