@@ -8,6 +8,7 @@ Chloe Liang<br/>
 <br/>
 # Core Gameplay<br/>
 ## Audio<br/>
+The game has a background track in the main level, as well as a crunchy gravel sound effect that plays when the player moves to the left or the right.
 <br/>
 
 ## Visual<br/>
