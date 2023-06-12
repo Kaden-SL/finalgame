@@ -2,7 +2,11 @@ extends Node
 
 
 # Called when the node enters the scene tree for the first time.
+var playedSound = false
+var time_in_seconds = 1
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_right"):
-		$DrivingSound.play()
+	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
+		if not $DrivingSound2d.is_playing():
+			$DrivingSound2d.play()
+		
