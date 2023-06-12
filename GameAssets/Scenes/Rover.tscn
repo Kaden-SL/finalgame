@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcq4awtwaie88"]
+[gd_scene load_steps=7 format=3 uid="uid://dcq4awtwaie88"]
 
 [ext_resource type="PackedScene" uid="uid://ce7dbtmcaibbk" path="res://GameAssets/Models/rover3.dae" id="2_cn0ob"]
 [ext_resource type="Script" path="res://GameAssets/Scenes/Rover.gd" id="3_ccr7o"]
@@ -8,6 +8,36 @@ size = Vector3(1.21172, 1, 1)
 
 [sub_resource type="Environment" id="Environment_dcep5"]
 ambient_light_color = Color(1, 0.905882, 0.937255, 1)
+
+[sub_resource type="Animation" id="Animation_80xm6"]
+resource_name = "WheelTurn"
+length = 10.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1_mr_rova/1")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1_mr_rova/2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array()
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("1_mr_rova/3")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array()
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgfyf"]
+_data = {
+"WheelTurn": SubResource("Animation_80xm6")
+}
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("3_ccr7o")
@@ -19,7 +49,7 @@ shape = SubResource("BoxShape3D_ipxsc")
 [node name="Cam Base" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Cam Base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.71397)
+transform = Transform3D(1, 0, 0, 0, 0.9965, 0.0835908, 0, -0.0835908, 0.9965, 0, 0.329556, 4.9697)
 environment = SubResource("Environment_dcep5")
 current = true
 
@@ -27,3 +57,16 @@ current = true
 
 [node name="rover3" parent="Node3D" instance=ExtResource("2_cn0ob")]
 transform = Transform3D(-1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0, -0.384148, 0)
+
+[node name="3" parent="Node3D/rover3/1_mr_rova" index="3"]
+transform = Transform3D(-2.52233e-08, 0.333167, -2.27112e-08, -0.2593, -6.19219e-08, -2.46707, -0.293691, -6.63729e-09, 0.0308682, 1.68882, -5.32748, -0.00130901)
+
+[node name="main_camera" parent="Node3D/rover3" index="4"]
+fov = 75.0
+
+[node name="AnimationPlayer" parent="Node3D/rover3" index="6"]
+libraries = {
+"": SubResource("AnimationLibrary_vgfyf")
+}
+
+[editable path="Node3D/rover3"]

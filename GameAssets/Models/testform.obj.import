@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btrhgfxbuvi71"
+path="res://.godot/imported/testform.obj-8d626d5da75f0ef1f2391b6e9f655ccf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/testform.obj-8d626d5da75f0ef1f2391b6e9f655ccf.mesh"]
+
+source_file="res://GameAssets/Models/testform.obj"
+dest_files=["res://.godot/imported/testform.obj-8d626d5da75f0ef1f2391b6e9f655ccf.mesh", "res://.godot/imported/testform.obj-8d626d5da75f0ef1f2391b6e9f655ccf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

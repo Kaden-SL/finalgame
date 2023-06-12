@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://chaa5pqvil8ry" path="res://GameAssets/Textures/marsbgtest.jpg" id="1_a3jgl"]
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="2_rt8it"]
-[ext_resource type="MeshLibrary" uid="uid://ha0848fjfaro" path="res://GameAssets/GridMaps/2test.tres" id="4_gp0hy"]
+[ext_resource type="MeshLibrary" uid="uid://ril5i60mtdsv" path="res://GameAssets/GridMaps/BasicMap.tres" id="4_c772i"]
 [ext_resource type="PackedScene" uid="uid://bgxqr2cd6r4en" path="res://scenes/main/minigameMenu.tscn" id="5_bi56e"]
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 
@@ -15,7 +15,7 @@ transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.61118)
+transform = Transform3D(4.70188, 0, 0, 0, 2.82997, 0, 0, 0, 1, 0, 0, -29.8785)
 texture = ExtResource("1_a3jgl")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_rt8it")]
@@ -23,8 +23,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.606686, -0.743117, 1.05052)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
-mesh_library = ExtResource("4_gp0hy")
-metadata/_editor_floor_ = Vector3(0, 1, 0)
+mesh_library = ExtResource("4_c772i")
+data = {
+"cells": PackedInt32Array(-65536, 0, 0, 0, 0, 0, -131072, 0, 0)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 scale = Vector2(0.41092, 0.395408)
