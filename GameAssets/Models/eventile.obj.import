@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rhgscx8ioaym"
+path="res://.godot/imported/eventile.obj-d5e317c7aa4d610a8d3abf1bf50618ef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/eventile.obj-d5e317c7aa4d610a8d3abf1bf50618ef.mesh"]
+
+source_file="res://GameAssets/Models/eventile.obj"
+dest_files=["res://.godot/imported/eventile.obj-d5e317c7aa4d610a8d3abf1bf50618ef.mesh", "res://.godot/imported/eventile.obj-d5e317c7aa4d610a8d3abf1bf50618ef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
