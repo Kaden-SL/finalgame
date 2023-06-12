@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chaa5pqvil8ry"
-path.s3tc="res://.godot/imported/marsbgtest.jpg-2db720f9c4ed7c2b4b7a2dec789db2df.s3tc.ctex"
-path.etc2="res://.godot/imported/marsbgtest.jpg-2db720f9c4ed7c2b4b7a2dec789db2df.etc2.ctex"
+uid="uid://b8lpcksn4m4e8"
+path.s3tc="res://.godot/imported/3-middle_bg.png-1523b6b3cfa562190251fc5f0d6195ba.s3tc.ctex"
+path.etc2="res://.godot/imported/3-middle_bg.png-1523b6b3cfa562190251fc5f0d6195ba.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://GameAssets/Textures/marsbgtest.jpg"
-dest_files=["res://.godot/imported/marsbgtest.jpg-2db720f9c4ed7c2b4b7a2dec789db2df.s3tc.ctex", "res://.godot/imported/marsbgtest.jpg-2db720f9c4ed7c2b4b7a2dec789db2df.etc2.ctex"]
+source_file="res://GameAssets/Textures/3-middle_bg.png"
+dest_files=["res://.godot/imported/3-middle_bg.png-1523b6b3cfa562190251fc5f0d6195ba.s3tc.ctex", "res://.godot/imported/3-middle_bg.png-1523b6b3cfa562190251fc5f0d6195ba.etc2.ctex"]
 
 [params]
 
