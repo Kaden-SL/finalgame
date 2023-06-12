@@ -1,16 +1,36 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5vursst8mxjj"]
+[gd_scene load_steps=14 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Texture2D" uid="uid://chaa5pqvil8ry" path="res://GameAssets/Textures/marsbgtest.jpg" id="1_a3jgl"]
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="2_rt8it"]
-[ext_resource type="MeshLibrary" uid="uid://bo8v6b23ept7g" path="res://GameAssets/GridMaps/COLLIDESwork.tres" id="3_sf0ho"]
+[ext_resource type="MeshLibrary" uid="uid://d2kxsu0k7n8do" path="res://GameAssets/GridMaps/COLLIDESwork.tres" id="3_sf0ho"]
 [ext_resource type="PackedScene" uid="uid://bgxqr2cd6r4en" path="res://scenes/main/minigameMenu.tscn" id="5_bi56e"]
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="Texture2D" uid="uid://dkoxi1g55t73d" path="res://GameAssets/Textures/1-closest_bg.png" id="7_y6iws"]
 [ext_resource type="Texture2D" uid="uid://c7a12gf58618w" path="res://GameAssets/Textures/2-second_closest_bg.png" id="8_5lmfh"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
-[ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
+[ext_resource type="AudioStream" uid="uid://btwleesu8e85a" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
+
+[sub_resource type="Animation" id="Animation_jleew"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfvvj"]
+_data = {
+"fade": SubResource("Animation_jleew")
+}
 
 [node name="main" type="Node3D"]
 script = ExtResource("1_x0rrk")
@@ -91,6 +111,18 @@ texture = ExtResource("10_mno6i")
 stream = ExtResource("11_b6lg1")
 volume_db = -2.0
 autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0)
+z_index = 10
+offset_right = 1600.0
+offset_bottom = 896.0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_nfvvj")
+}
 
 [connection signal="paused" from="." to="Rover" method="_on_main_paused"]
 [connection signal="unpaused" from="." to="Rover" method="_on_main_unpaused"]

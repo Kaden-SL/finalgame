@@ -30,6 +30,7 @@ func _ready():
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
 	print(mintime)
+	$ColorRect/AnimationPlayer.play_backwards("fade")
 
 
 
