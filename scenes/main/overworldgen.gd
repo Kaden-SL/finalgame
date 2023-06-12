@@ -18,6 +18,15 @@ func _ready():
 		$GridMap2.set_cell_item(-startpose,0)
 	var right = startpose
 	var left = -startpose
+	right[0]+=1
+	$GridMap2.set_cell_item(right,1)
+	$GridMap2.set_cell_item(-right,1)
+	right[0]+=1
+	$GridMap2.set_cell_item(right,2)
+	$GridMap2.set_cell_item(-right,2)
+	right[1]+=1
+	$GridMap2.set_cell_item(right,2)
+	$GridMap2.set_cell_item(-right,2)
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
 	print(mintime)

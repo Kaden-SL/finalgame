@@ -21,6 +21,7 @@ color = Color(0.556863, 0.796078, 0.996078, 0.588235)
 
 [node name="overlay" type="ColorRect" parent="."]
 z_index = -1
+layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 904.0
 mouse_filter = 2
