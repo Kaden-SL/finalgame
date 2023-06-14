@@ -1,6 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://rnjj4su20fdu"]
+[gd_scene load_steps=8 format=3 uid="uid://rnjj4su20fdu"]
 
 [ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
+[ext_resource type="Texture2D" uid="uid://g3rppususl1k" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
+
+[sub_resource type="Animation" id="Animation_nahjj"]
+resource_name = "day-n-night"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0.278431, 0.521569, 0.254902), Color(1, 0.458824, 0.278431, 0.254902), Color(0, 0.278431, 0.521569, 0.254902)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f1tqn"]
+_data = {
+"day-n-night": SubResource("Animation_nahjj")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_kcgfi"]
 font_size = 35
@@ -28,6 +50,23 @@ _data = {
 [node name="mainMenu" type="Node2D"]
 script = ExtResource("1_bly3b")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(800, 448)
+texture = ExtResource("2_43jns")
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+modulate = Color(0, 0.278431, 0.521569, 0.254902)
+offset_left = -800.0
+offset_top = -448.0
+offset_right = 800.0
+offset_bottom = 448.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/ColorRect"]
+method_call_mode = 1
+libraries = {
+"": SubResource("AnimationLibrary_f1tqn")
+}
+
 [node name="gui" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -51,6 +90,7 @@ offset_bottom = 672.0
 text = "Exit Game"
 
 [node name="title" type="Label" parent="gui"]
+z_index = 1
 layout_mode = 0
 offset_left = 640.0
 offset_top = 192.0
@@ -60,6 +100,14 @@ text = "Martian Soliloquy"
 label_settings = SubResource("LabelSettings_kcgfi")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="titlebg" type="ColorRect" parent="gui"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 192.0
+offset_right = 1088.0
+offset_bottom = 320.0
+color = Color(0, 0, 0, 0.392157)
 
 [node name="settings" type="Control" parent="gui"]
 layout_mode = 3
@@ -116,6 +164,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="gui"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 z_index = 10
 layout_mode = 0

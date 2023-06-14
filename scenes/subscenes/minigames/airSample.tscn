@@ -1,3 +1,76 @@
-[gd_scene format=3 uid="uid://c6w2vraw2y86w"]
+[gd_scene load_steps=5 format=3 uid="uid://c6w2vraw2y86w"]
+
+[ext_resource type="Script" path="res://scenes/subscenes/minigames/airSample.gd" id="1_qhchx"]
+[ext_resource type="PackedScene" uid="uid://m0wostg2ex24" path="res://scenes/subscenes/minigames/airSampleScenes/dust.tscn" id="2_fde3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xji3t"]
+size = Vector2(752, 624)
+
+[sub_resource type="Curve2D" id="Curve2D_dgg6b"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1480, 128, 0, 0, 0, 0, 1480, 768)
+}
+point_count = 2
 
 [node name="airSample" type="Node2D"]
+script = ExtResource("1_qhchx")
+dust = ExtResource("2_fde3h")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(840, 184)
+gravity_space_override = 3
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(248, 264)
+shape = SubResource("RectangleShape2D_xji3t")
+
+[node name="window" type="ColorRect" parent="Area2D/CollisionShape2D"]
+show_behind_parent = true
+offset_left = -400.0
+offset_top = -336.0
+offset_right = -384.0
+offset_bottom = 336.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Area2D/CollisionShape2D"]
+offset_left = -384.0
+offset_top = 320.0
+offset_right = 392.0
+offset_bottom = 336.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Area2D/CollisionShape2D"]
+offset_left = 384.0
+offset_top = -336.0
+offset_right = 400.0
+offset_bottom = 336.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Area2D/CollisionShape2D"]
+offset_left = -400.0
+offset_top = -336.0
+offset_right = 392.0
+offset_bottom = -320.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+
+[node name="spawnTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[node name="gameTimer" type="Timer" parent="."]
+wait_time = 22.0
+one_shot = true
+autostart = true
+
+[node name="windowRightEdge" type="Path2D" parent="."]
+curve = SubResource("Curve2D_dgg6b")
+
+[node name="spawnPos" type="PathFollow2D" parent="windowRightEdge"]
+position = Vector2(1480, 128)
+rotation = 1.5708
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="spawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="gameTimer" to="." method="_on_game_timer_timeout"]
