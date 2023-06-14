@@ -130,6 +130,8 @@ libraries = {
 
 [connection signal="paused" from="." to="Rover" method="_on_main_paused"]
 [connection signal="unpaused" from="." to="Rover" method="_on_main_unpaused"]
+[connection signal="inNode" from="Rover" to="overworldMenu" method="_on_rover_in_node"]
+[connection signal="outNode" from="Rover" to="overworldMenu" method="_on_rover_out_node"]
 [connection signal="pressed" from="Rover" to="." method="_on_character_body_3d_pressed"]
 [connection signal="done" from="airMinigame" to="." method="_on_air_minigame_done"]
 [connection signal="done" from="drillMinigame" to="." method="_on_drill_minigame_done"]

@@ -118,3 +118,13 @@ func _on_close_button_pressed():
 	if !downloading && !uploading:
 		unpause.emit()
 		visible = false
+
+
+func _on_rover_in_node():
+	#$minigameStartButton.disabled = false;
+	pass # delete this line and uncomment the above line when implemented
+
+
+func _on_rover_out_node():
+	#$minigameStartButton.disabled = true;
+	pass # delete this line and uncomment the above line when implemented
