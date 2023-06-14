@@ -32,6 +32,9 @@ func _ready():
 	var mintime = time['hour']*60+time['minute']
 	print(mintime)
 	$ColorRect/AnimationPlayer.play_backwards("fade")
+	
+	$drillMinigame/drillSample/Area2D.monitoring = false;
+	$airMinigame/airSample/Area2D.monitoring = false
 
 
 
@@ -69,8 +72,16 @@ func _on_overworld_menu_unpause():
 
 
 func _on_overworld_menu_minigame_start():
-	$airMinigame.visible = true
-	$airMinigame.resetGame()
+	var coinflip = randi() % 2;
+	if coinflip == 0:
+		$airMinigame.visible = true
+		$airMinigame/airSample/Area2D.monitoring = true
+		$airMinigame.resetGame()
+	else:
+		$drillMinigame.visible = true
+		$drillMinigame/drillSample/Area2D.monitoring = true;
+		$drillMinigame.resetGame()
+	
 	$overworldMenu.visible = false
 	#add the minigame
 
@@ -89,4 +100,13 @@ func _on_air_minigame_done(dataCollected):
 	$airMinigame.visible = false
 	$airMinigame.data1 = 0;
 	$airMinigame.data2 = 0
+	$airMinigame/airSample/Area2D.monitoring = false
+	$overworldMenu.visible = true
+
+
+func _on_drill_minigame_done(dataCollected):
+	data += dataCollected
+	$drillMinigame.visible = false
+	$drillMinigame.data = 0;
+	$drillMinigame/drillSample/Area2D.monitoring = false
 	$overworldMenu.visible = true

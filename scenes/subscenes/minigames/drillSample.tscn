@@ -1,3 +1,79 @@
-[gd_scene format=3 uid="uid://ddm5bjuwve5lu"]
+[gd_scene load_steps=5 format=3 uid="uid://ddm5bjuwve5lu"]
+
+[ext_resource type="Script" path="res://scenes/subscenes/minigames/drillSample.gd" id="1_bla1k"]
+[ext_resource type="PackedScene" uid="uid://m0wostg2ex24" path="res://scenes/subscenes/minigames/airSampleScenes/dust.tscn" id="2_7dwov"]
+[ext_resource type="PackedScene" uid="uid://dvm3kudtpgx1n" path="res://scenes/subscenes/minigames/drillSampleScenes/crosshair.tscn" id="2_15hpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33efb"]
+size = Vector2(752, 624)
 
 [node name="drillSample" type="Node2D"]
+script = ExtResource("1_bla1k")
+dust = ExtResource("2_7dwov")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(840, 184)
+collision_layer = 2
+gravity_space_override = 3
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+linear_damp_space_override = 3
+linear_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(248, 264)
+shape = SubResource("RectangleShape2D_33efb")
+
+[node name="window" type="ColorRect" parent="Area2D/CollisionShape2D"]
+show_behind_parent = true
+offset_left = -400.0
+offset_top = -336.0
+offset_right = -384.0
+offset_bottom = 336.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Area2D/CollisionShape2D"]
+offset_left = -384.0
+offset_top = 320.0
+offset_right = 392.0
+offset_bottom = 336.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Area2D/CollisionShape2D"]
+offset_left = 384.0
+offset_top = -336.0
+offset_right = 400.0
+offset_bottom = 336.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Area2D/CollisionShape2D"]
+offset_left = -400.0
+offset_top = -336.0
+offset_right = 392.0
+offset_bottom = -320.0
+color = Color(0.0784314, 0.0784314, 0.235294, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="drillTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="gameTimer" type="Timer" parent="."]
+wait_time = 22.0
+one_shot = true
+autostart = true
+
+[node name="crosshair" parent="." instance=ExtResource("2_15hpr")]
+position = Vector2(1456, 752)
+collision_layer = 2
+
+[node name="spawnTimer" type="Timer" parent="."]
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="drillTimer" to="." method="_on_drill_timer_timeout"]
+[connection signal="timeout" from="gameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="body_entered" from="crosshair" to="." method="_on_crosshair_body_entered"]
+[connection signal="timeout" from="spawnTimer" to="." method="_on_spawn_timer_timeout"]
