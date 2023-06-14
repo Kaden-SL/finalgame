@@ -6,7 +6,8 @@ var grid_steps= 50
 
 signal paused
 signal unpaused
-
+var data = 0
+var dataSent = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -41,6 +42,16 @@ func _physics_process(delta):
 	#literally just what happens if you click the rover
 	if Input.is_action_just_pressed("menuButton"):
 		_on_character_body_3d_pressed()
+	if !$overworldMenu.downloading && !$overworldMenu.uploading:
+		var statsText = "Collect data and send home.
+		You are overdue for a software update by
+		[INT OVERFLOW EXCEPTION] seconds.
+		Please download the software update
+		as soon as possible.
+		
+		Data Collected : {dc} kb
+		Data Uploaded : {du} kb"
+		$overworldMenu/textBox/statsLabel.text = statsText.format({"dc": data, "du": dataSent})
 
 
 
@@ -58,9 +69,9 @@ func _on_overworld_menu_unpause():
 
 
 func _on_overworld_menu_minigame_start():
-	#make the current minigame area unusable/delete/whatever [placeholder]
+	$airMinigame.visible = true
+	$airMinigame.resetGame()
 	$overworldMenu.visible = false
-	$minigameMenu.visible = true
 	#add the minigame
 
 
@@ -71,3 +82,11 @@ func _on_minigame_menu_minigame_abort():
 
 func _on_timer_timeout():
 	$tutorialLabel1.visible = false
+
+
+func _on_air_minigame_done(dataCollected):
+	data += dataCollected
+	$airMinigame.visible = false
+	$airMinigame.data1 = 0;
+	$airMinigame.data2 = 0
+	$overworldMenu.visible = true

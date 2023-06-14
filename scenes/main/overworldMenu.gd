@@ -34,20 +34,34 @@ func _process(delta):
 
 
 func _on_upload_button_toggled(button_pressed):
-	uploading = button_pressed;
-	if uploading :
-		$uploadButton.text = buttonStrings[1];
-	else :
-		$uploadButton.text = buttonStrings[0];
+	if !downloading:
+		uploading = button_pressed;
+		if uploading :
+			$uploadButton.text = buttonStrings[1];
+			$textBox/statsLabel.text = "Attempting to upload data..."
+			for n in 3:
+				await get_tree().create_timer(10).timeout
+				$textBox/statsLabel.text += "\n\nConnection Failed, Retrying..."
+			await get_tree().create_timer(10).timeout
+			$textBox/statsLabel.text += "\n\nConnection Failed, No Response. Aborting"
+		else :
+			$uploadButton.text = buttonStrings[0];
 
 
 
 func _on_download_button_toggled(button_pressed):
-	downloading = button_pressed;
-	if downloading :
-		$downloadButton.text = buttonStrings[3];
-	else :
-		$downloadButton.text = buttonStrings[2];
+	if !uploading:
+		downloading = button_pressed;
+		if downloading :
+			$downloadButton.text = buttonStrings[3];
+			$textBox/statsLabel.text = "Attempting to download updates..."
+			for n in 3:
+				await get_tree().create_timer(10).timeout
+				$textBox/statsLabel.text += "\n\nConnection Failed, Retrying..."
+			await get_tree().create_timer(10).timeout
+			$textBox/statsLabel.text += "\n\nConnection Failed, No Response. Aborting"
+		else :
+			$downloadButton.text = buttonStrings[2];
 
 
 
@@ -101,5 +115,6 @@ func _on_fullscreen_toggle_pressed():
 
 
 func _on_close_button_pressed():
-	unpause.emit()
-	visible = false
+	if !downloading && !uploading:
+		unpause.emit()
+		visible = false

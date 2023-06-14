@@ -7,7 +7,7 @@ size = Vector2(15, 15)
 specular_color = Color(0.701961, 0.372549, 0.278431, 1)
 
 [node name="dust" type="RigidBody2D"]
-modulate = Color(0.521569, 0.407843, 0.239216, 1)
+modulate = Color(0.752941, 0.607843, 0.4, 1)
 show_behind_parent = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

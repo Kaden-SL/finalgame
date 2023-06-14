@@ -191,6 +191,8 @@ offset_right = 384.0
 offset_bottom = 224.0
 text = "aaaaa"
 
+[node name="txtTimer" type="Timer" parent="."]
+
 [connection signal="toggled" from="uploadButton" to="." method="_on_upload_button_toggled"]
 [connection signal="toggled" from="downloadButton" to="." method="_on_download_button_toggled"]
 [connection signal="pressed" from="hibernateButton" to="." method="_on_hibernate_button_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6w2vraw2y86w"]
+[gd_scene load_steps=6 format=3 uid="uid://c6w2vraw2y86w"]
 
 [ext_resource type="Script" path="res://scenes/subscenes/minigames/airSample.gd" id="1_qhchx"]
 [ext_resource type="PackedScene" uid="uid://m0wostg2ex24" path="res://scenes/subscenes/minigames/airSampleScenes/dust.tscn" id="2_fde3h"]
+[ext_resource type="PackedScene" uid="uid://bmryg34dva4jg" path="res://scenes/subscenes/minigames/airSampleScenes/airProbe.tscn" id="3_qa3s2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xji3t"]
 size = Vector2(752, 624)
@@ -59,6 +60,9 @@ color = Color(0.0784314, 0.0784314, 0.235294, 1)
 wait_time = 0.25
 autostart = true
 
+[node name="dodgeTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [node name="gameTimer" type="Timer" parent="."]
 wait_time = 22.0
 one_shot = true
@@ -71,6 +75,11 @@ curve = SubResource("Curve2D_dgg6b")
 position = Vector2(1480, 128)
 rotation = 1.5708
 
+[node name="airProbe" parent="." instance=ExtResource("3_qa3s2")]
+position = Vector2(832, 728)
+
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="spawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="dodgeTimer" to="." method="_on_dodge_timer_timeout"]
 [connection signal="timeout" from="gameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="hit" from="airProbe" to="." method="_on_air_probe_hit"]

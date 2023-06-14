@@ -32,7 +32,7 @@ z_index = 1
 layout_mode = 0
 offset_left = 160.0
 offset_top = 160.0
-offset_right = 256.0
+offset_right = 320.0
 offset_bottom = 320.0
 text = "Tool 1"
 
@@ -40,22 +40,11 @@ text = "Tool 1"
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.045
-anchor_bottom = 0.036
-offset_left = 304.0
-offset_top = 160.0
-offset_right = 328.0
-offset_bottom = 287.6
-text = "Tool 2"
-
-[node name="tool3Button" type="Button" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 448.0
+offset_left = 384.0
 offset_top = 160.0
 offset_right = 544.0
 offset_bottom = 320.0
-text = "Tool 3"
+text = "Tool 2"
 
 [node name="quitButton" type="Button" parent="."]
 z_index = 1
@@ -84,7 +73,6 @@ offset_top = 8.0
 offset_right = 136.0
 offset_bottom = 40.0
 mouse_filter = 2
-button_pressed = true
 button_mask = 0
 flat = true
 icon_alignment = 1
@@ -121,6 +109,7 @@ offset_right = 544.0
 offset_bottom = 576.0
 
 [node name="settings" type="Control" parent="textBox"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -163,16 +152,15 @@ tick_count = 5
 ticks_on_borders = true
 
 [node name="objectivesLabel" type="Label" parent="textBox"]
-visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 384.0
 offset_bottom = 224.0
 text = "aaaaa"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="tool1Button" to="." method="_on_tool_1_button_pressed"]
 [connection signal="pressed" from="tool2Button" to="." method="_on_tool_2_button_pressed"]
-[connection signal="pressed" from="tool3Button" to="." method="_on_tool_3_button_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="toggled" from="settingsToggle" to="." method="_on_settings_toggle_toggled"]
 [connection signal="pressed" from="textBox/settings/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]

@@ -2,7 +2,7 @@ extends Control
 
 
 
-@export var toolID = 0
+signal toolID(id)
 
 signal minigameAbort;
 
@@ -24,20 +24,15 @@ func _process(delta):
 
 
 func _on_tool_1_button_pressed():
-	toolID = 1;
+	toolID.emit(1)
 	pass # Replace with function body.
 
 
 
 func _on_tool_2_button_pressed():
-	toolID = 2;
+	toolID.emit(2)
 	pass # Replace with function body.
 
-
-
-func _on_tool_3_button_pressed():
-	toolID = 3
-	pass # Replace with function body.
 
 
 

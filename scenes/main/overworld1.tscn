@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="2_rt8it"]
 [ext_resource type="MeshLibrary" uid="uid://d2kxsu0k7n8do" path="res://GameAssets/GridMaps/COLLIDESwork.tres" id="3_sf0ho"]
-[ext_resource type="PackedScene" uid="uid://bgxqr2cd6r4en" path="res://scenes/main/minigameMenu.tscn" id="5_bi56e"]
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
+[ext_resource type="PackedScene" uid="uid://du25miaxbtdtg" path="res://scenes/main/airMinigame.tscn" id="6_ldkkf"]
 [ext_resource type="Texture2D" uid="uid://dkoxi1g55t73d" path="res://GameAssets/Textures/1-closest_bg.png" id="7_y6iws"]
 [ext_resource type="Texture2D" uid="uid://c7a12gf58618w" path="res://GameAssets/Textures/2-second_closest_bg.png" id="8_5lmfh"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
@@ -56,7 +56,7 @@ scale = Vector2(0.41092, 0.395408)
 texture_normal = ExtResource("1_a3jgl")
 action = "right"
 
-[node name="minigameMenu" parent="." instance=ExtResource("5_bi56e")]
+[node name="airMinigame" parent="." instance=ExtResource("6_ldkkf")]
 visible = false
 
 [node name="overworldMenu" parent="." instance=ExtResource("6_gikdm")]
@@ -80,7 +80,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="initialTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.5
 one_shot = true
 autostart = true
 
@@ -127,7 +127,7 @@ libraries = {
 [connection signal="paused" from="." to="Rover" method="_on_main_paused"]
 [connection signal="unpaused" from="." to="Rover" method="_on_main_unpaused"]
 [connection signal="pressed" from="Rover" to="." method="_on_character_body_3d_pressed"]
-[connection signal="minigameAbort" from="minigameMenu" to="." method="_on_minigame_menu_minigame_abort"]
+[connection signal="done" from="airMinigame" to="." method="_on_air_minigame_done"]
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
 [connection signal="timeout" from="initialTimer" to="." method="_on_timer_timeout"]

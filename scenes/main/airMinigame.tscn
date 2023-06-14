@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://du25miaxbtdtg"]
+
+[ext_resource type="Script" path="res://scenes/main/airMinigame.gd" id="1_0c0am"]
+[ext_resource type="PackedScene" uid="uid://c6w2vraw2y86w" path="res://scenes/subscenes/minigames/airSample.tscn" id="2_ckd58"]
+[ext_resource type="PackedScene" uid="uid://bgxqr2cd6r4en" path="res://scenes/main/minigameMenu.tscn" id="3_u6fgo"]
+
+[node name="airMinigame" type="Node2D"]
+script = ExtResource("1_0c0am")
+
+[node name="airSample" parent="." instance=ExtResource("2_ckd58")]
+z_index = 10
+
+[node name="ColorRect" type="ColorRect" parent="airSample"]
+offset_left = 704.0
+offset_top = 128.0
+offset_right = 1472.0
+offset_bottom = 768.0
+color = Color(0, 0, 0, 0.392157)
+
+[node name="minigameMenu" parent="." instance=ExtResource("3_u6fgo")]
+
+[connection signal="dodge" from="airSample" to="." method="_on_air_sample_dodge"]
+[connection signal="hit" from="airSample" to="." method="_on_air_sample_hit"]
+[connection signal="timeout" from="airSample" to="." method="_on_air_sample_timeout"]
+[connection signal="minigameAbort" from="minigameMenu" to="." method="_on_minigame_menu_minigame_abort"]
+[connection signal="toolID" from="minigameMenu" to="." method="_on_minigame_menu_tool_id"]
