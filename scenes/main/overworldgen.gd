@@ -8,30 +8,29 @@ signal paused
 signal unpaused
 var data = 0
 var dataSent = 0
-
+var right = Vector3(0,0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var startpose= Vector3(0,0,0)
-	for x in range(0,10):
-		startpose[0]=x
-		$GridMap2.set_cell_item(startpose,0)
-		$GridMap2.set_cell_item(-startpose,0)
-	var right = startpose
-	var left = -startpose
-	right[0]+=1
-	$GridMap2.set_cell_item(right,3)
-	$GridMap2.set_cell_item(-right,3)
-	right[0]+=1
-	$GridMap2.set_cell_item(right,2)
-	$GridMap2.set_cell_item(-right,2)
-	right[1]+=1
-	$GridMap2.set_cell_item(right,2)
-	$GridMap2.set_cell_item(-right,2)
-	print($GridMap2.get_cell_item(-right))
+#	for x in range(0,10):
+#		startpose[0]=x
+#		$GridMap2.set_cell_item(startpose,0)
+#		$GridMap2.set_cell_item(-startpose,0)
+#	right = startpose
+#	right[0]+=1
+#	$GridMap2.set_cell_item(right,3)
+#	$GridMap2.set_cell_item(-right,3)
+#	right[0]+=1
+#	$GridMap2.set_cell_item(right,2)
+#	$GridMap2.set_cell_item(-right,2)
+#	right[1]+=1
+#	$GridMap2.set_cell_item(right,2)
+#	$GridMap2.set_cell_item(-right,2)
+	print($GridMap2.get_cell_item(startpose))
+	
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
-	print(mintime)
 	if 300<=mintime and mintime<=1200:
 		$"Backgrounds Night/ClosestNight".hide()
 		$"Backgrounds Night/Closest2Night".hide()
@@ -55,8 +54,10 @@ func _ready():
 
 
 func _physics_process(delta):
-#	if Input.is_action_just_pressed("ui_right"):
-#		print("fuck")
+	
+	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
+		print($GridMap2.get_cell_item($Rover.global_position))
+		
 	
 	#literally just what happens if you click the rover
 	if Input.is_action_just_pressed("menuButton"):

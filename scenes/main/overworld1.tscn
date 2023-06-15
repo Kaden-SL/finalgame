@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
-[ext_resource type="MeshLibrary" uid="uid://cnmgjcid8uges" path="res://GameAssets/GridMaps/surelyworkstry.tres" id="3_3pt88"]
+[ext_resource type="MeshLibrary" uid="uid://b4nqokfur1x6n" path="res://GameAssets/GridMaps/COLLIDES.tres" id="3_3bg8v"]
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="PackedScene" uid="uid://c24lqhtlmlj1j" path="res://scenes/main/drillMinigame.tscn" id="6_jcsge"]
 [ext_resource type="PackedScene" uid="uid://du25miaxbtdtg" path="res://scenes/main/airMinigame.tscn" id="6_ldkkf"]
@@ -49,15 +49,15 @@ transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="Rover" parent="." instance=ExtResource("15_3pkgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807273, 0, 0.707524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807273, 0, 1.1255)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
-mesh_library = ExtResource("3_3pt88")
+mesh_library = ExtResource("3_3bg8v")
 data = {
-"cells": PackedInt32Array(0, 0, 0)
+"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 4, 0, 1)
 }
-metadata/_editor_floor_ = Vector3(0, 1, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="airMinigame" parent="." instance=ExtResource("6_ldkkf")]
 visible = false
@@ -132,11 +132,11 @@ texture = ExtResource("10_mno6i")
 [node name="Backgrounds Night" type="Node" parent="."]
 
 [node name="ClosestNight" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 215.858, 2.69059, -1.80229)
+transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 35.9278, 2.69059, -1.80229)
 texture = ExtResource("15_cxn22")
 
 [node name="Closest2Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 215.858, 11.3324, -31.5748)
+transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 76.1203, 11.3324, -31.5748)
 texture = ExtResource("16_40u71")
 
 [node name="Closest3Night" type="Sprite3D" parent="Backgrounds Night"]
