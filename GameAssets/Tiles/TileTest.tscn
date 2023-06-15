@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ucoy8mpb41nt"]
+[gd_scene load_steps=8 format=3 uid="uid://gqjyyfmpejvo"]
 
-[ext_resource type="ArrayMesh" uid="uid://nisge5ngftmk" path="res://GameAssets/Models/text.obj" id="1_540r8"]
+[ext_resource type="ArrayMesh" uid="uid://2tg1lqq5hv63" path="res://GameAssets/Meshes/vaccum.obj" id="1_f4ch0"]
+[ext_resource type="ArrayMesh" uid="uid://nisge5ngftmk" path="res://GameAssets/Meshes/text.obj" id="1_uiiuv"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -29,8 +30,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 shape = SubResource("ConcavePolygonShape3D_g6llx")
 
 [node name="Event Tile" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51144, 0, 0)
-mesh = ExtResource("1_540r8")
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.369849, 0.555998, 0)
+mesh = ExtResource("1_f4ch0")
 surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Event Tile"]
@@ -51,7 +52,7 @@ shape = SubResource("ConcavePolygonShape3D_g6llx")
 
 [node name="Collision Test" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27205, 0, 0)
-mesh = ExtResource("1_540r8")
+mesh = ExtResource("1_uiiuv")
 surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 
 [node name="Area3D" type="Area3D" parent="Collision Test"]

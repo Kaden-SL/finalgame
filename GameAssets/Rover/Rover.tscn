@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://dcq4awtwaie88"]
 
-[ext_resource type="PackedScene" uid="uid://ce7dbtmcaibbk" path="res://GameAssets/Models/rover3.dae" id="2_cn0ob"]
-[ext_resource type="Script" path="res://GameAssets/Scenes/Rover.gd" id="3_ccr7o"]
-[ext_resource type="Script" path="res://GameAssets/Scenes/roversound.gd" id="3_me80w"]
-[ext_resource type="AudioStream" uid="uid://ck4kr6n3q3rv" path="res://GameAssets/Sounds/RoverWalkShort.wav" id="4_anwmm"]
+[ext_resource type="Script" path="res://GameAssets/Rover/Rover.gd" id="1_h2pr4"]
+[ext_resource type="PackedScene" uid="uid://ce7dbtmcaibbk" path="res://GameAssets/Models/rover3.dae" id="2_qld7b"]
+[ext_resource type="Script" path="res://GameAssets/Rover/roversound.gd" id="3_tcf8t"]
+[ext_resource type="AudioStream" uid="uid://ck4kr6n3q3rv" path="res://GameAssets/Sounds/RoverWalkShort.wav" id="4_htyb7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ipxsc"]
 size = Vector3(1.21172, 1, 1)
@@ -42,7 +42,7 @@ _data = {
 }
 
 [node name="CharacterBody3D" type="CharacterBody3D" groups=["Rover"]]
-script = ExtResource("3_ccr7o")
+script = ExtResource("1_h2pr4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106596, 0, 0)
@@ -57,7 +57,7 @@ current = true
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="rover3" parent="Node3D" instance=ExtResource("2_cn0ob")]
+[node name="rover3" parent="Node3D" instance=ExtResource("2_qld7b")]
 transform = Transform3D(-1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0, -0.384148, 0)
 
 [node name="1" parent="Node3D/rover3/1_mr_rova" index="1"]
@@ -77,10 +77,10 @@ libraries = {
 }
 
 [node name="Sound" type="Node" parent="."]
-script = ExtResource("3_me80w")
+script = ExtResource("3_tcf8t")
 
 [node name="DrivingSound2d" type="AudioStreamPlayer2D" parent="Sound"]
-stream = ExtResource("4_anwmm")
+stream = ExtResource("4_htyb7")
 volume_db = 10.0
 
 [node name="Timer" type="Timer" parent="."]
