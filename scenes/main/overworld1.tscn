@@ -73,6 +73,20 @@ visible = false
 [node name="overworldMenu" parent="." instance=ExtResource("6_gikdm")]
 visible = false
 
+[node name="MUSIC BG" parent="overworldMenu/textBox/settings" index="3"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 153.0
+offset_bottom = 51.0
+
+[node name="MUSIC" parent="overworldMenu/textBox/settings" index="4"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 157.0
+offset_bottom = 31.0
+
 [node name="tutorialLabel1" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -185,7 +199,10 @@ libraries = {
 [connection signal="done" from="drillMinigame" to="." method="_on_drill_minigame_done"]
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
+[connection signal="toggled" from="overworldMenu/textBox/settings/SFX" to="Rover/Sound" method="_on_sfx_toggled"]
+[connection signal="toggled" from="overworldMenu/textBox/settings/MUSIC" to="." method="_on_music_toggled"]
 [connection signal="timeout" from="initialTimer" to="." method="_on_timer_timeout"]
 
 [editable path="Rover"]
 [editable path="Rover/Node3D/rover3"]
+[editable path="overworldMenu"]

@@ -146,23 +146,22 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="volumeLabel" type="Label" parent="textBox/settings"]
-z_index = 2
+[node name="SFX BG" type="ColorRect" parent="textBox/settings"]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 32.0
-offset_right = 249.0
-offset_bottom = 64.0
-text = "Volume : 100%"
-vertical_alignment = 1
-
-[node name="volumeBG" type="ColorRect" parent="textBox/settings"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 24.0
-offset_right = 371.0
-offset_bottom = 112.0
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 159.0
+offset_bottom = 123.0
 color = Color(0, 0, 0, 0.490196)
+
+[node name="SFX" type="CheckButton" parent="textBox/settings"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 81.0
+offset_right = 153.0
+offset_bottom = 112.0
+text = "SFX Volume"
+alignment = 1
 
 [node name="fullscreenToggle" type="Button" parent="textBox/settings"]
 z_index = 1
@@ -173,15 +172,20 @@ offset_right = 288.0
 offset_bottom = 200.0
 text = "Toggle Fullscreen"
 
-[node name="HSlider" type="HSlider" parent="textBox/settings"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 72.0
-offset_right = 352.0
-offset_bottom = 104.0
-value = 75.0
-tick_count = 5
-ticks_on_borders = true
+[node name="MUSIC BG" type="ColorRect" parent="textBox/settings"]
+offset_left = 227.0
+offset_top = 71.0
+offset_right = 380.0
+offset_bottom = 122.0
+color = Color(0, 0, 0, 0.490196)
+
+[node name="MUSIC" type="CheckButton" parent="textBox/settings"]
+offset_left = 223.0
+offset_top = 80.0
+offset_right = 380.0
+offset_bottom = 111.0
+text = "Music Volume"
+alignment = 1
 
 [node name="statsLabel" type="Label" parent="textBox"]
 visible = false
@@ -201,4 +205,3 @@ text = "aaaaa"
 [connection signal="pressed" from="closeButton" to="." method="_on_close_button_pressed"]
 [connection signal="toggled" from="settingsToggle" to="." method="_on_settings_toggle_toggled"]
 [connection signal="pressed" from="textBox/settings/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
-[connection signal="value_changed" from="textBox/settings/HSlider" to="." method="_on_h_slider_value_changed"]

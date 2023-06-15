@@ -131,3 +131,11 @@ func _on_drill_minigame_done(dataCollected):
 
 
 
+
+func _on_music_toggled(button_pressed):
+	if button_pressed:
+		$Sounds/BackgroundMusic.stop()
+	else:
+		$Sounds/BackgroundMusic.play()
+
+
