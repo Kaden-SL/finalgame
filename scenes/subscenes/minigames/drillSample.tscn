@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddm5bjuwve5lu"]
+[gd_scene load_steps=7 format=3 uid="uid://ddm5bjuwve5lu"]
 
 [ext_resource type="Script" path="res://scenes/subscenes/minigames/drillSample.gd" id="1_bla1k"]
 [ext_resource type="PackedScene" uid="uid://m0wostg2ex24" path="res://scenes/subscenes/minigames/airSampleScenes/dust.tscn" id="2_7dwov"]
 [ext_resource type="PackedScene" uid="uid://dvm3kudtpgx1n" path="res://scenes/subscenes/minigames/drillSampleScenes/crosshair.tscn" id="2_15hpr"]
+[ext_resource type="PackedScene" uid="uid://bx6ar4obkcqem" path="res://scenes/subscenes/minigames/drillSampleScenes/drill.tscn" id="4_2huer"]
+[ext_resource type="Texture2D" uid="uid://bo75ppdibemtx" path="res://GameAssets/Textures/drillvacuum.png" id="5_e6iv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33efb"]
 size = Vector2(752, 624)
@@ -71,6 +73,15 @@ position = Vector2(1456, 752)
 collision_layer = 2
 
 [node name="spawnTimer" type="Timer" parent="."]
+
+[node name="drill" parent="." instance=ExtResource("4_2huer")]
+visible = false
+
+[node name="succ" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_e6iv4")
+centered = false
+offset = Vector2(-13.5, -40)
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="drillTimer" to="." method="_on_drill_timer_timeout"]

@@ -30,7 +30,7 @@ func _process(delta):
 		$minigameMenu/textBox/objectivesLabel.text = objText.format({"d1": data})
 	else:
 		var objText = "The drill has overheated.
-		You must move on.
+		Collect and move on.
 		
 		Data Collected : {d1} kb";
 		$minigameMenu/textBox/objectivesLabel.text = objText.format({"d1" = data})
@@ -46,10 +46,14 @@ func _on_drill_sample_hit():
 
 func _on_minigame_menu_tool_id(id):
 	$drillSample.mode = id
+	if(id == 2):
+		$drillSample/succ.visible = true;
+	else:
+		$drillSample/succ.visible = false;
 
 
 func _on_minigame_menu_minigame_abort():
 	if data > 20:
-		done.emit(data)
-	else:
-		done.emit(0)
+		get_parent().data += data
+	done.emit(0)
+	queue_free()

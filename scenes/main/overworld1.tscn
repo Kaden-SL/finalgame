@@ -5,23 +5,23 @@
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="PackedScene" uid="uid://c24lqhtlmlj1j" path="res://scenes/main/drillMinigame.tscn" id="6_jcsge"]
 [ext_resource type="PackedScene" uid="uid://du25miaxbtdtg" path="res://scenes/main/airMinigame.tscn" id="6_ldkkf"]
-[ext_resource type="Texture2D" uid="uid://dnmna388btulr" path="res://GameAssets/Textures/left.png" id="7_kyum0"]
+[ext_resource type="Texture2D" uid="uid://b1hjcj32hf0vx" path="res://GameAssets/Textures/left.png" id="7_kyum0"]
 [ext_resource type="Texture2D" uid="uid://c7a12gf58618w" path="res://GameAssets/Textures/2-second_closest_bg.png" id="8_5lmfh"]
-[ext_resource type="Texture2D" uid="uid://p4bgaby204w" path="res://GameAssets/Textures/leftpressed.png" id="8_oimym"]
-[ext_resource type="Texture2D" uid="uid://cu4wsmc7xbdy4" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
+[ext_resource type="Texture2D" uid="uid://cbjvep8a5ws3" path="res://GameAssets/Textures/leftpressed.png" id="8_oimym"]
+[ext_resource type="Texture2D" uid="uid://dscjrnu3spwh" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
-[ext_resource type="Texture2D" uid="uid://dt6ek4hb6jxl4" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
-[ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
-[ext_resource type="Texture2D" uid="uid://biofjqe0mskcp" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
+[ext_resource type="Texture2D" uid="uid://ln6bw11od555" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
+[ext_resource type="AudioStream" uid="uid://btwleesu8e85a" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
+[ext_resource type="Texture2D" uid="uid://blj5luh0t1je6" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
 [ext_resource type="Texture2D" uid="uid://din7nfhnoy0qg" path="res://GameAssets/Textures/1-closest_bg_bigger.png" id="11_xsx5q"]
-[ext_resource type="Texture2D" uid="uid://bb7knhe58ontp" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
+[ext_resource type="Texture2D" uid="uid://c5cas3l4jf5v2" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Rover/Rover.tscn" id="15_3pkgi"]
-[ext_resource type="Texture2D" uid="uid://bntb2ahaocsar" path="res://GameAssets/Textures/1-closest_bg_night.png" id="15_cxn22"]
-[ext_resource type="Texture2D" uid="uid://co1ga8ict62km" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
-[ext_resource type="Texture2D" uid="uid://d4iptn20q2qp4" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
-[ext_resource type="Texture2D" uid="uid://bajh67soimp3t" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
-[ext_resource type="Texture2D" uid="uid://cwum7xtb4ce2b" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
+[ext_resource type="Texture2D" uid="uid://barx8b72jnbtp" path="res://GameAssets/Textures/1-closest_bg_night.png" id="15_cxn22"]
+[ext_resource type="Texture2D" uid="uid://csqcyqm5x2u75" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
+[ext_resource type="Texture2D" uid="uid://ce0hpri05mdp2" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
+[ext_resource type="Texture2D" uid="uid://bf6rbdqv544d6" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
+[ext_resource type="Texture2D" uid="uid://2lbss5iqo3c7" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
 
 [sub_resource type="Animation" id="Animation_jleew"]
 resource_name = "fade"
@@ -45,6 +45,8 @@ _data = {
 
 [node name="main" type="Node3D"]
 script = ExtResource("1_x0rrk")
+drillgame = ExtResource("6_jcsge")
+airgame = ExtResource("6_ldkkf")
 
 [node name="Lighting" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0.637249, -0.597132, 0.487183, 0, 0, 0)
@@ -52,9 +54,6 @@ light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="Rover" parent="." instance=ExtResource("15_3pkgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.00904)
-
-[node name="3" parent="Rover/Node3D/rover3/1_mr_rova/3" index="0"]
-transform = Transform3D(-0.984352, -3.11071e-07, -0.176209, -2.89852e-07, 1, -1.46159e-07, 0.176209, -9.27979e-08, -0.984353, 0, 0, 0)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
@@ -64,28 +63,18 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="airMinigame" parent="." instance=ExtResource("6_ldkkf")]
-visible = false
-
-[node name="drillMinigame" parent="." instance=ExtResource("6_jcsge")]
-visible = false
-
 [node name="overworldMenu" parent="." instance=ExtResource("6_gikdm")]
 visible = false
 
 [node name="MUSIC BG" parent="overworldMenu/textBox/settings" index="3"]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 153.0
-offset_bottom = 51.0
+offset_left = 232.0
+offset_top = 72.0
+offset_right = 385.0
+offset_bottom = 123.0
 
 [node name="MUSIC" parent="overworldMenu/textBox/settings" index="4"]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 157.0
-offset_bottom = 31.0
+offset_left = 232.0
+offset_right = 389.0
 
 [node name="tutorialLabel1" type="Label" parent="."]
 anchors_preset = 8
@@ -195,8 +184,6 @@ libraries = {
 "": SubResource("AnimationLibrary_nfvvj")
 }
 
-[connection signal="done" from="airMinigame" to="." method="_on_air_minigame_done"]
-[connection signal="done" from="drillMinigame" to="." method="_on_drill_minigame_done"]
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
 [connection signal="toggled" from="overworldMenu/textBox/settings/SFX" to="Rover/Sound" method="_on_sfx_toggled"]

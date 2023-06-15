@@ -37,13 +37,17 @@ func _process(delta):
 
 func _on_minigame_menu_minigame_abort():
 	if data1 >= 12 && data2 >= 12:
-		done.emit(data1 + data2)
-	else:
-		done.emit(0)
+		get_parent().data += (data1 + data2)
+	done.emit(0)
+	queue_free()
 
 
 func _on_minigame_menu_tool_id(id):
 	$airSample.mode = id
+	if(id == 1):
+		$airSample/airProbe/sprite.play("vacuum")
+	else:
+		$airSample/airProbe/sprite.play("flag")
 
 
 func _on_air_sample_hit():
@@ -53,8 +57,6 @@ func _on_air_sample_hit():
 
 func _on_air_sample_timeout():
 	active = false;
-	
-
 
 func _on_air_sample_dodge():
 	if $airSample.mode == 2 && $airSample.active:

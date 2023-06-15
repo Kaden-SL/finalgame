@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://bx6ar4obkcqem"]
+
+[ext_resource type="Texture2D" uid="uid://cp4rl0j8skhtd" path="res://GameAssets/Textures/drill31x44each.png" id="1_5g5nk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8rus"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(0, 0, 31, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drbvd"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(31, 0, 31, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re001"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(62, 0, 31, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trsd1"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(93, 0, 31, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5h4l"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(155, 0, 31, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a677c"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(186, 0, 31, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coysx"]
+atlas = ExtResource("1_5g5nk")
+region = Rect2(124, 0, 31, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wu5jj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8rus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drbvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re001")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trsd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5h4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a677c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coysx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="drill" type="AnimatedSprite2D"]
+position = Vector2(-16, -43.6364)
+scale = Vector2(1.03226, 1.09091)
+sprite_frames = SubResource("SpriteFrames_wu5jj")
+frame_progress = 0.00314402
+centered = false
+offset = Vector2(-16, -48)

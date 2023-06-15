@@ -12,11 +12,15 @@ var active = true;
 func _ready():
 	resetGame()
 	$dodgeTimer.start(3)
+	$airProbe/sprite.play("vacuum")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if(mode == 1):
+		$airProbe/Label.text = ""
+	else:
+		$airProbe/Label.text = "Dataset Complete in : %.1f" % $dodgeTimer.time_left
 
 
 
@@ -28,7 +32,7 @@ func _on_spawn_timer_timeout():
 			var spawnPos = get_node("windowRightEdge/spawnPos");
 			spawnPos.progress_ratio = randf();
 			
-			particle.linear_velocity = Vector2(-randf_range(1000, 1500.0), randf_range(-60.0, 15.0));
+			particle.linear_velocity = Vector2(-randf_range(600.0, 800.0), randf_range(-60.0, 15.0));
 			particle.position = spawnPos.position;
 			
 			add_child(particle);

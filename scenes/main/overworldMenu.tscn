@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgxgml0ql3st1"]
+[gd_scene load_steps=3 format=3 uid="uid://dgxgml0ql3st1"]
 
 [ext_resource type="Script" path="res://scenes/main/overworldMenu.gd" id="1_0kc1m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufq5s"]
 
 [node name="overworldMenu" type="Control"]
 layout_mode = 3
@@ -31,15 +33,17 @@ color = Color(0.556863, 0.796078, 0.996078, 0.588235)
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.045
-anchor_bottom = 0.036
 offset_left = 384.0
 offset_top = 160.0
-offset_right = 472.0
-offset_bottom = 191.6
+offset_right = 544.0
+offset_bottom = 224.0
 toggle_mode = true
 text = "Upload
 Data"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(128, 128)
+shape = SubResource("RectangleShape2D_ufq5s")
 
 [node name="downloadButton" type="Button" parent="."]
 z_index = 1
@@ -52,21 +56,12 @@ toggle_mode = true
 text = "Download
 Data"
 
-[node name="hibernateButton" type="Button" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 544.0
-offset_bottom = 320.0
-text = "Hibernate"
-
 [node name="minigameStartButton" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
 offset_left = 160.0
 offset_top = 256.0
-offset_right = 320.0
+offset_right = 544.0
 offset_bottom = 320.0
 text = "Collect Data"
 
@@ -173,6 +168,7 @@ offset_bottom = 200.0
 text = "Toggle Fullscreen"
 
 [node name="MUSIC BG" type="ColorRect" parent="textBox/settings"]
+layout_mode = 0
 offset_left = 227.0
 offset_top = 71.0
 offset_right = 380.0
@@ -180,6 +176,7 @@ offset_bottom = 122.0
 color = Color(0, 0, 0, 0.490196)
 
 [node name="MUSIC" type="CheckButton" parent="textBox/settings"]
+layout_mode = 0
 offset_left = 223.0
 offset_top = 80.0
 offset_right = 380.0
@@ -199,7 +196,6 @@ text = "aaaaa"
 
 [connection signal="toggled" from="uploadButton" to="." method="_on_upload_button_toggled"]
 [connection signal="toggled" from="downloadButton" to="." method="_on_download_button_toggled"]
-[connection signal="pressed" from="hibernateButton" to="." method="_on_hibernate_button_pressed"]
 [connection signal="pressed" from="minigameStartButton" to="." method="_on_minigame_start_button_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="closeButton" to="." method="_on_close_button_pressed"]

@@ -18,12 +18,14 @@ script = ExtResource("1_qhchx")
 dust = ExtResource("2_fde3h")
 
 [node name="Area2D" type="Area2D" parent="."]
+z_index = 1
 position = Vector2(840, 184)
 gravity_space_override = 3
 gravity_point_center = Vector2(0, 0)
 gravity_direction = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 1
 position = Vector2(248, 264)
 shape = SubResource("RectangleShape2D_xji3t")
 
@@ -36,10 +38,10 @@ offset_bottom = 336.0
 color = Color(0.0784314, 0.0784314, 0.235294, 1)
 
 [node name="ColorRect" type="ColorRect" parent="Area2D/CollisionShape2D"]
-offset_left = -384.0
+offset_left = -400.0
 offset_top = 320.0
-offset_right = 392.0
-offset_bottom = 336.0
+offset_right = 400.0
+offset_bottom = 456.0
 color = Color(0.0784314, 0.0784314, 0.235294, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Area2D/CollisionShape2D"]
@@ -77,6 +79,15 @@ rotation = 1.5708
 
 [node name="airProbe" parent="." instance=ExtResource("3_qa3s2")]
 position = Vector2(832, 728)
+
+[node name="Label" type="Label" parent="airProbe"]
+offset_left = -72.0
+offset_top = -80.0
+offset_right = 99.0
+offset_bottom = -54.0
+text = "Dataset Complete In : "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="spawnTimer" to="." method="_on_spawn_timer_timeout"]

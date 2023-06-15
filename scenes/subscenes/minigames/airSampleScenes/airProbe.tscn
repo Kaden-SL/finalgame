@@ -1,11 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmryg34dva4jg"]
+[gd_scene load_steps=13 format=3 uid="uid://bmryg34dva4jg"]
 
 [ext_resource type="Script" path="res://scenes/subscenes/minigames/airSampleScenes/airProbe.gd" id="1_qu3ct"]
+[ext_resource type="Texture2D" uid="uid://ch53jbkp4igfi" path="res://GameAssets/Textures/flagpole30x180each.png" id="2_1muha"]
+[ext_resource type="Texture2D" uid="uid://cc3sy8lejgpi7" path="res://GameAssets/Textures/vacuumpole.png" id="3_a3v1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xp52s"]
-size = Vector2(16, 80)
+size = Vector2(48, 80)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_giio0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk7b1"]
+atlas = ExtResource("2_1muha")
+region = Rect2(0, 0, 30, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd1kp"]
+atlas = ExtResource("2_1muha")
+region = Rect2(30, 0, 30, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kepnm"]
+atlas = ExtResource("2_1muha")
+region = Rect2(60, 0, 30, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eq48"]
+atlas = ExtResource("2_1muha")
+region = Rect2(90, 0, 30, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qu22"]
+atlas = ExtResource("2_1muha")
+region = Rect2(120, 0, 30, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mijw2"]
+atlas = ExtResource("2_1muha")
+region = Rect2(150, 0, 30, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5s2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk7b1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd1kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kepnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eq48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qu22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mijw2")
+}],
+"loop": true,
+"name": &"flag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a3v1o")
+}],
+"loop": true,
+"name": &"vacuum",
+"speed": 5.0
+}]
 
 [node name="airProbe" type="CharacterBody2D"]
 motion_mode = 1
@@ -17,10 +77,20 @@ gravity_point_center = Vector2(0, 0)
 gravity_direction = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-16, 0)
 shape = SubResource("RectangleShape2D_xp52s")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(16, 80)
+[node name="hitboxSprite" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(-16, 0)
+scale = Vector2(48, 80)
 texture = SubResource("CanvasTexture_giio0")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-40, 312)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_k5s2w")
+animation = &"flag"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

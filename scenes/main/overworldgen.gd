@@ -4,6 +4,8 @@ const dir = [Vector3.RIGHT,Vector3.LEFT]
 var grid_size=14
 var grid_steps= 50
 
+@export var drillgame: PackedScene
+@export var airgame: PackedScene
 signal paused
 signal unpaused
 var data = 0
@@ -43,13 +45,8 @@ func _ready():
 		$"Backgrounds Day/Closest4".hide()
 		$"Backgrounds Day/Closest5".hide()
 		$"Backgrounds Day/Closest".hide()
-		
-		
-		
-	$ColorRect/AnimationPlayer.play_backwards("fade")
 	
-	$drillMinigame/drillSample/Area2D.monitoring = false;
-	$airMinigame/airSample/Area2D.monitoring = false
+	$ColorRect/AnimationPlayer.play_backwards("fade")
 
 
 
@@ -92,13 +89,11 @@ func _on_overworld_menu_unpause():
 func _on_overworld_menu_minigame_start():
 	var coinflip = randi() % 2;
 	if coinflip == 0:
-		$airMinigame.visible = true
-		$airMinigame/airSample/Area2D.monitoring = true
-		$airMinigame.resetGame()
+		var game = airgame.instantiate()
+		add_child(game)
 	else:
-		$drillMinigame.visible = true
-		$drillMinigame/drillSample/Area2D.monitoring = true;
-		$drillMinigame.resetGame()
+		var game = drillgame.instantiate()
+		add_child(game)
 	
 	$overworldMenu.visible = false
 	#add the minigame
@@ -114,19 +109,10 @@ func _on_timer_timeout():
 
 
 func _on_air_minigame_done(dataCollected):
-	data += dataCollected
-	$airMinigame.visible = false
-	$airMinigame.data1 = 0;
-	$airMinigame.data2 = 0
-	$airMinigame/airSample/Area2D.monitoring = false
 	$overworldMenu.visible = true
 
 
 func _on_drill_minigame_done(dataCollected):
-	data += dataCollected
-	$drillMinigame.visible = false
-	$drillMinigame.data = 0;
-	$drillMinigame/drillSample/Area2D.monitoring = false
 	$overworldMenu.visible = true
 
 
