@@ -20,17 +20,33 @@ func _ready():
 	var right = startpose
 	var left = -startpose
 	right[0]+=1
-	$GridMap2.set_cell_item(right,1)
-	$GridMap2.set_cell_item(-right,1)
+	$GridMap2.set_cell_item(right,3)
+	$GridMap2.set_cell_item(-right,3)
 	right[0]+=1
 	$GridMap2.set_cell_item(right,2)
 	$GridMap2.set_cell_item(-right,2)
 	right[1]+=1
 	$GridMap2.set_cell_item(right,2)
 	$GridMap2.set_cell_item(-right,2)
+	print($GridMap2.get_cell_item(-right))
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
 	print(mintime)
+	if 300<=mintime and mintime<=1200:
+		$"Backgrounds Night/ClosestNight".hide()
+		$"Backgrounds Night/Closest2Night".hide()
+		$"Backgrounds Night/Closest3Night".hide()
+		$"Backgrounds Night/Closest3Night".hide()
+		$"Backgrounds Night/Closest3Night".hide()
+	else:
+		$"Backgrounds Day/Closest2".hide()
+		$"Backgrounds Day/Closest3".hide()
+		$"Backgrounds Day/Closest4".hide()
+		$"Backgrounds Day/Closest5".hide()
+		$"Backgrounds Day/Closest".hide()
+		
+		
+		
 	$ColorRect/AnimationPlayer.play_backwards("fade")
 	
 	$drillMinigame/drillSample/Area2D.monitoring = false;

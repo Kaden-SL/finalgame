@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ucoy8mpb41nt"]
+[gd_scene load_steps=9 format=3 uid="uid://c7my8vlvb1eyl"]
 
-[ext_resource type="ArrayMesh" uid="uid://nisge5ngftmk" path="res://GameAssets/Meshes/text.obj" id="1_wyt4l"]
+[ext_resource type="ArrayMesh" uid="uid://nisge5ngftmk" path="res://GameAssets/Meshes/text.obj" id="1_ilfp8"]
+[ext_resource type="ArrayMesh" uid="uid://dojmi2lfrvlnb" path="res://GameAssets/Meshes/drill.obj" id="2_73nfu"]
+[ext_resource type="Script" path="res://GameAssets/Models/overlap.gd" id="2_mygmq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -30,8 +32,7 @@ shape = SubResource("ConcavePolygonShape3D_g6llx")
 
 [node name="Event Tile" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51144, 0, 0)
-mesh = ExtResource("1_wyt4l")
-surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
+mesh = ExtResource("1_ilfp8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Event Tile"]
 
@@ -51,10 +52,18 @@ shape = SubResource("ConcavePolygonShape3D_g6llx")
 
 [node name="Collision Test" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27205, 0, 0)
-mesh = ExtResource("1_wyt4l")
-surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
+mesh = ExtResource("2_73nfu")
 
-[node name="Area3D" type="Area3D" parent="Collision Test"]
+[node name="Test Area" type="Area3D" parent="Collision Test"]
+script = ExtResource("2_mygmq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision Test/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision Test/Test Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17225, 0)
 shape = SubResource("BoxShape3D_tl8bv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collision Test/Test Area"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision Test/Test Area/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g6llx")
+
+[connection signal="body_entered" from="Collision Test/Test Area" to="Collision Test/Test Area" method="_on_body_entered"]
