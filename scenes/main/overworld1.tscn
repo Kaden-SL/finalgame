@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c7a12gf58618w" path="res://GameAssets/Textures/2-second_closest_bg.png" id="8_5lmfh"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
-[ext_resource type="AudioStream" uid="uid://btwleesu8e85a" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
+[ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
 
 [sub_resource type="Animation" id="Animation_jleew"]
 resource_name = "fade"

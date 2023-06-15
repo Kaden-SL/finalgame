@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://rnjj4su20fdu"]
 
 [ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
-[ext_resource type="Texture2D" uid="uid://g3rppususl1k" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
+[ext_resource type="Texture2D" uid="uid://ckpgt528221pn" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
 
 [sub_resource type="Animation" id="Animation_nahjj"]
 resource_name = "day-n-night"

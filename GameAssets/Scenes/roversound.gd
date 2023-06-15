@@ -3,7 +3,6 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 var playedSound = false
-var time_in_seconds = 1
 
 func _process(delta):
 	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
