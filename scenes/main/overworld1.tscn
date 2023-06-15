@@ -1,7 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
-[ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Scenes/Rover.tscn" id="2_7pu68"]
 [ext_resource type="MeshLibrary" uid="uid://d2kxsu0k7n8do" path="res://GameAssets/GridMaps/COLLIDESwork.tres" id="3_sf0ho"]
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="PackedScene" uid="uid://c24lqhtlmlj1j" path="res://scenes/main/drillMinigame.tscn" id="6_jcsge"]
@@ -15,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
 [ext_resource type="Texture2D" uid="uid://dt6ek4hb6jxl4" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
 [ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
+[ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Scenes/Rover.tscn" id="15_li4ys"]
 
 [sub_resource type="Animation" id="Animation_jleew"]
 resource_name = "fade"
@@ -43,8 +43,8 @@ script = ExtResource("1_x0rrk")
 transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0.637249, -0.597132, 0.487183, 0, 0, 0)
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
-[node name="Rover" parent="." instance=ExtResource("2_7pu68")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951503, -0.436182, 0.739566)
+[node name="Rover" parent="." instance=ExtResource("15_li4ys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.964718, -0.0586982, 0.65143)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
