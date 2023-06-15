@@ -1,7 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://gqjyyfmpejvo"]
-
-[ext_resource type="ArrayMesh" uid="uid://2tg1lqq5hv63" path="res://GameAssets/Meshes/vaccum.obj" id="1_f4ch0"]
-[ext_resource type="ArrayMesh" uid="uid://nisge5ngftmk" path="res://GameAssets/Meshes/text.obj" id="1_uiiuv"]
+[gd_scene load_steps=5 format=3 uid="uid://gqjyyfmpejvo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -16,8 +13,6 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="BoxMesh" id="BoxMesh_1qtry"]
 size = Vector3(2, 4, 2)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tl8bv"]
-
 [node name="Node3D" type="Node3D"]
 
 [node name="Default Tile" type="MeshInstance3D" parent="."]
@@ -30,9 +25,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 shape = SubResource("ConcavePolygonShape3D_g6llx")
 
 [node name="Event Tile" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.369849, 0.555998, 0)
-mesh = ExtResource("1_f4ch0")
-surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.70876, 0.28764, 0.400418)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Event Tile"]
 
@@ -50,12 +43,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 transform = Transform3D(2.02992, 0, 0, 0, 4.00765, 0, 0, 0, 1.95819, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_g6llx")
 
-[node name="Collision Test" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.27205, 0, 0)
-mesh = ExtResource("1_uiiuv")
-surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
+[node name="Event Tile2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.369849, 0.555998, 0)
 
-[node name="Area3D" type="Area3D" parent="Collision Test"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Event Tile2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision Test/Area3D"]
-shape = SubResource("BoxShape3D_tl8bv")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Event Tile2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g6llx")

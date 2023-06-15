@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5vursst8mxjj"]
+[gd_scene load_steps=24 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
 [ext_resource type="MeshLibrary" uid="uid://b4nqokfur1x6n" path="res://GameAssets/GridMaps/COLLIDES.tres" id="3_3bg8v"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
 [ext_resource type="Texture2D" uid="uid://dt6ek4hb6jxl4" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
 [ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
+[ext_resource type="Texture2D" uid="uid://biofjqe0mskcp" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
 [ext_resource type="Texture2D" uid="uid://din7nfhnoy0qg" path="res://GameAssets/Textures/1-closest_bg_bigger.png" id="11_xsx5q"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Rover/Rover.tscn" id="15_3pkgi"]
 [ext_resource type="Texture2D" uid="uid://bntb2ahaocsar" path="res://GameAssets/Textures/1-closest_bg_night.png" id="15_cxn22"]
@@ -49,6 +50,7 @@ transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="Rover" parent="." instance=ExtResource("15_3pkgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.00904)
 
 [node name="3" parent="Rover/Node3D/rover3/1_mr_rova/3" index="0"]
 transform = Transform3D(-0.984352, -3.11071e-07, -0.176209, -2.89852e-07, 1, -1.46159e-07, 0.176209, -9.27979e-08, -0.984353, 0, 0, 0)
@@ -109,6 +111,9 @@ texture_pressed = ExtResource("10_nki3t")
 action = "ui_right"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(1482, 3)
+scale = Vector2(0.376667, 0.343333)
+texture_normal = ExtResource("11_nfftf")
 action = "menuButton"
 
 [node name="Backgrounds Day" type="Node" parent="."]

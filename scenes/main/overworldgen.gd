@@ -55,7 +55,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	print($GridMap2.get_cell_item($Rover.global_position))
+#	print($GridMap2.get_cell_item($Rover.global_position))
 		
 	
 	#literally just what happens if you click the rover
