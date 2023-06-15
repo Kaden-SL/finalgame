@@ -55,6 +55,8 @@ func _physics_process(delta):
 		Data Collected : {dc} kb
 		Data Uploaded : {du} kb"
 		$overworldMenu/textBox/statsLabel.text = statsText.format({"dc": data, "du": dataSent})
+	
+		
 
 
 
