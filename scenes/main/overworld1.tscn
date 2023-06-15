@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c5vursst8mxjj"]
+[gd_scene load_steps=25 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
 [ext_resource type="MeshLibrary" uid="uid://b4nqokfur1x6n" path="res://GameAssets/GridMaps/COLLIDES.tres" id="3_3bg8v"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
 [ext_resource type="Texture2D" uid="uid://biofjqe0mskcp" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
 [ext_resource type="Texture2D" uid="uid://din7nfhnoy0qg" path="res://GameAssets/Textures/1-closest_bg_bigger.png" id="11_xsx5q"]
+[ext_resource type="Texture2D" uid="uid://bb7knhe58ontp" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Rover/Rover.tscn" id="15_3pkgi"]
 [ext_resource type="Texture2D" uid="uid://bntb2ahaocsar" path="res://GameAssets/Textures/1-closest_bg_night.png" id="15_cxn22"]
 [ext_resource type="Texture2D" uid="uid://co1ga8ict62km" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
@@ -114,6 +115,7 @@ action = "ui_right"
 position = Vector2(1482, 3)
 scale = Vector2(0.376667, 0.343333)
 texture_normal = ExtResource("11_nfftf")
+texture_pressed = ExtResource("12_xgu7k")
 action = "menuButton"
 
 [node name="Backgrounds Day" type="Node" parent="."]
