@@ -125,3 +125,10 @@ func _on_music_toggled(button_pressed):
 		$Sounds/BackgroundMusic.play()
 
 
+
+
+func _on_overworld_menu_quit():
+	data = 0;
+	$ColorRect/AnimationPlayer.play("fade")
+	await get_tree().create_timer(1).timeout
+	get_tree().change_scene_to_file("res://scenes/main/mainMenu.tscn")

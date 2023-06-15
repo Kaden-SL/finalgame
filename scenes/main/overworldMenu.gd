@@ -13,6 +13,7 @@ const buttonStrings = ["Upload\nData",
 
 signal unpause;
 signal minigameStart;
+signal quit;
 
 
 
@@ -82,7 +83,9 @@ func _on_minigame_start_button_pressed():
 func _on_quit_button_pressed():
 	#if there is an exit cinematic, show that
 	#reset all data and whatever
-	#return to main menu
+	downloading = false;
+	uploading = false;
+	quit.emit()
 	pass # Replace with function body.
 
 

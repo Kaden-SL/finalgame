@@ -185,6 +185,7 @@ libraries = {
 }
 
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
+[connection signal="quit" from="overworldMenu" to="." method="_on_overworld_menu_quit"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
 [connection signal="toggled" from="overworldMenu/textBox/settings/SFX" to="Rover/Sound" method="_on_sfx_toggled"]
 [connection signal="toggled" from="overworldMenu/textBox/settings/MUSIC" to="." method="_on_music_toggled"]
