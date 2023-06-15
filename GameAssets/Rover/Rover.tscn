@@ -13,28 +13,29 @@ ambient_light_color = Color(1, 0.905882, 0.937255, 1)
 
 [sub_resource type="Animation" id="Animation_80xm6"]
 resource_name = "WheelTurn"
-length = 10.0
+length = 2.0
+loop_mode = 1
 tracks/0/type = "rotation_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("1_mr_rova/1")
+tracks/0/path = NodePath("1_mr_rova/1/1")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array()
+tracks/0/keys = PackedFloat32Array(0, 1, 2.61569e-07, 0.999734, 3.12651e-07, -0.0230712, 0.5, 1, -1.93585e-07, -0.739895, -2.31391e-07, 0.672722, 1, 1, 8.73629e-09, 0.0333909, 1.04424e-08, 0.999442, 1.5, 1, 1.93561e-07, 0.739801, 2.31361e-07, 0.672825, 2, 1, 2.61009e-07, 0.997592, 3.11982e-07, -0.0693473)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("1_mr_rova/2")
+tracks/1/path = NodePath("1_mr_rova/2/2")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array()
+tracks/1/keys = PackedFloat32Array(0, 1, -1.47433e-07, 0.9737, -5.8627e-08, 0.227833, 0.5, 1, 9.36354e-08, -0.618402, 3.72343e-08, 0.785862, 1, 1, -6.7334e-08, 0.444698, -2.67754e-08, 0.895681, 1.5, 1, -1.49699e-07, 0.988666, -5.95281e-08, 0.150131, 2, 1, 1.0699e-07, -0.706601, 4.25448e-08, 0.707613)
 tracks/2/type = "rotation_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("1_mr_rova/3")
+tracks/2/path = NodePath("1_mr_rova/3/3")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array()
+tracks/2/keys = PackedFloat32Array(0, 1, -1.50822e-07, 0.996081, -5.99744e-08, -0.088451, 0.5, 1, 8.33523e-08, -0.550488, 3.31451e-08, 0.834843, 1, 1, -4.05531e-08, 0.267827, -1.6126e-08, 0.963467, 1.5, 1, -1.30848e-07, 0.86417, -5.2032e-08, 0.503201, 2, 1, -1.48307e-07, 0.97947, -5.89743e-08, -0.201591)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgfyf"]
 _data = {
@@ -65,8 +66,17 @@ transform = Transform3D(1.12404e-07, 0.333167, 1.01651e-07, -0.248618, 2.75947e-
 rotation_edit_mode = 2
 engine_force = 58.51
 
+[node name="1" parent="Node3D/rover3/1_mr_rova/1" index="0"]
+transform = Transform3D(-0.996739, 4.97193e-07, 0.0806821, 5.47657e-07, 1, 6.0334e-07, -0.0806821, 6.45559e-07, -0.99674, 0, 0, 0)
+
+[node name="2" parent="Node3D/rover3/1_mr_rova/2" index="0"]
+transform = Transform3D(-0.250631, -2.47653e-07, -0.968083, -1.31076e-07, 1, -2.21884e-07, 0.968083, 7.12813e-08, -0.250631, 0, 0, 0)
+
 [node name="3" parent="Node3D/rover3/1_mr_rova" index="3"]
 transform = Transform3D(-2.52233e-08, 0.333167, -2.27112e-08, -0.2593, -6.19219e-08, -2.46707, -0.293691, -6.63729e-09, 0.0308682, 1.68882, -5.32748, -0.00130901)
+
+[node name="3" parent="Node3D/rover3/1_mr_rova/3" index="0"]
+transform = Transform3D(-0.978576, -3.11983e-07, -0.205884, -2.8719e-07, 1, -1.50305e-07, 0.205884, -8.79569e-08, -0.978577, 0, 0, 0)
 
 [node name="main_camera" parent="Node3D/rover3" index="4"]
 fov = 75.0
