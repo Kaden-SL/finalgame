@@ -33,5 +33,4 @@ func _physics_process(delta):
 		
 
 
-func _on_area_3d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	print(body_rid, body, body_shape_index, local_shape_index)
+

@@ -49,15 +49,17 @@ transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="Rover" parent="." instance=ExtResource("15_3pkgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807273, 0, 1.1255)
+
+[node name="3" parent="Rover/Node3D/rover3/1_mr_rova/3" index="0"]
+transform = Transform3D(-0.984352, -3.11071e-07, -0.176209, -2.89852e-07, 1, -1.46159e-07, 0.176209, -9.27979e-08, -0.984353, 0, 0, 0)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
 mesh_library = ExtResource("3_3bg8v")
 data = {
-"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 4, 0, 1)
+"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 4, 0, 1, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0)
 }
-metadata/_editor_floor_ = Vector3(0, -3, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="airMinigame" parent="." instance=ExtResource("6_ldkkf")]
 visible = false
@@ -107,6 +109,7 @@ texture_pressed = ExtResource("10_nki3t")
 action = "ui_right"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Buttons"]
+action = "menuButton"
 
 [node name="Backgrounds Day" type="Node" parent="."]
 
@@ -176,3 +179,6 @@ libraries = {
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
 [connection signal="timeout" from="initialTimer" to="." method="_on_timer_timeout"]
+
+[editable path="Rover"]
+[editable path="Rover/Node3D/rover3"]

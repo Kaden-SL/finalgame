@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://rnjj4su20fdu"]
+[gd_scene load_steps=13 format=3 uid="uid://rnjj4su20fdu"]
 
 [ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
+[ext_resource type="Texture2D" uid="uid://eywse01h8j6q" path="res://GameAssets/Textures/EarthGotREKD2.png" id="2_1bl6g"]
 [ext_resource type="Texture2D" uid="uid://ckpgt528221pn" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
+[ext_resource type="Texture2D" uid="uid://cdbh0rlco5jbd" path="res://GameAssets/Textures/EarthGotREKD3.png" id="3_i3i1o"]
 
-[sub_resource type="Animation" id="Animation_nahjj"]
-resource_name = "day-n-night"
-length = 20.0
+[sub_resource type="Animation" id="Animation_jvbts"]
+resource_name = "fade1"
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,15 +15,65 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 10, 20),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0.278431, 0.521569, 0.254902), Color(1, 0.458824, 0.278431, 0.254902), Color(0, 0.278431, 0.521569, 0.254902)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_f1tqn"]
+[sub_resource type="Animation" id="Animation_tf24f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ho4ta"]
+resource_name = "fade2"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3rsik"]
+resource_name = "fade3"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fpfed"]
 _data = {
-"day-n-night": SubResource("Animation_nahjj")
+"RESET": SubResource("Animation_tf24f"),
+"fade1": SubResource("Animation_jvbts"),
+"fade2": SubResource("Animation_ho4ta"),
+"fade3": SubResource("Animation_3rsik")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_kcgfi"]
@@ -50,21 +102,31 @@ _data = {
 [node name="mainMenu" type="Node2D"]
 script = ExtResource("1_bly3b")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Back3" type="Sprite2D" parent="."]
+position = Vector2(800, 448)
+texture = ExtResource("2_1bl6g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Back3"]
+libraries = {
+"": SubResource("AnimationLibrary_fpfed")
+}
+
+[node name="Back2" type="Sprite2D" parent="."]
+position = Vector2(800, 448)
+texture = ExtResource("3_i3i1o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Back2"]
+libraries = {
+"": SubResource("AnimationLibrary_fpfed")
+}
+
+[node name="Back1" type="Sprite2D" parent="."]
 position = Vector2(800, 448)
 texture = ExtResource("2_43jns")
 
-[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
-modulate = Color(0, 0.278431, 0.521569, 0.254902)
-offset_left = -800.0
-offset_top = -448.0
-offset_right = 800.0
-offset_bottom = 448.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/ColorRect"]
-method_call_mode = 1
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Back1"]
 libraries = {
-"": SubResource("AnimationLibrary_f1tqn")
+"": SubResource("AnimationLibrary_fpfed")
 }
 
 [node name="gui" type="Control" parent="."]

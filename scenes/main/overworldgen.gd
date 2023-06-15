@@ -55,8 +55,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
-		print($GridMap2.get_cell_item($Rover.global_position))
+	print($GridMap2.get_cell_item($Rover.global_position))
 		
 	
 	#literally just what happens if you click the rover
@@ -129,3 +128,6 @@ func _on_drill_minigame_done(dataCollected):
 	$drillMinigame.data = 0;
 	$drillMinigame/drillSample/Area2D.monitoring = false
 	$overworldMenu.visible = true
+
+
+

@@ -4,6 +4,10 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$gui/ColorRect.visible = false
+	$Back1/AnimationPlayer.play("fade1")
+	await get_tree().create_timer(10).timeout
+	$Back2/AnimationPlayer.play("fade2")
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
