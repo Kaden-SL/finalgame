@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://c5vursst8mxjj"]
 
 [ext_resource type="Script" path="res://scenes/main/overworldgen.gd" id="1_x0rrk"]
-[ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://scenes/subscenes/player/Player3d.tscn" id="2_rt8it"]
+[ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Scenes/Rover.tscn" id="2_7pu68"]
 [ext_resource type="MeshLibrary" uid="uid://d2kxsu0k7n8do" path="res://GameAssets/GridMaps/COLLIDESwork.tres" id="3_sf0ho"]
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="PackedScene" uid="uid://c24lqhtlmlj1j" path="res://scenes/main/drillMinigame.tscn" id="6_jcsge"]
@@ -39,12 +39,12 @@ _data = {
 [node name="main" type="Node3D"]
 script = ExtResource("1_x0rrk")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="Lighting" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0.637249, -0.597132, 0.487183, 0, 0, 0)
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
-[node name="Rover" parent="." instance=ExtResource("2_rt8it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.606686, -0.743117, 1.05052)
+[node name="Rover" parent="." instance=ExtResource("2_7pu68")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.951503, -0.436182, 0.739566)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
@@ -142,11 +142,6 @@ libraries = {
 "": SubResource("AnimationLibrary_nfvvj")
 }
 
-[connection signal="paused" from="." to="Rover" method="_on_main_paused"]
-[connection signal="unpaused" from="." to="Rover" method="_on_main_unpaused"]
-[connection signal="inNode" from="Rover" to="overworldMenu" method="_on_rover_in_node"]
-[connection signal="outNode" from="Rover" to="overworldMenu" method="_on_rover_out_node"]
-[connection signal="pressed" from="Rover" to="." method="_on_character_body_3d_pressed"]
 [connection signal="done" from="airMinigame" to="." method="_on_air_minigame_done"]
 [connection signal="done" from="drillMinigame" to="." method="_on_drill_minigame_done"]
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
