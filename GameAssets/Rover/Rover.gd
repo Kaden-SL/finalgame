@@ -22,10 +22,11 @@ func _physics_process(delta):
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
-		
+		$Node3D/rover3/AnimationPlayer.play("WheelTurn")
 
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$Node3D/rover3/AnimationPlayer.stop()
 
 
 	move_and_slide()

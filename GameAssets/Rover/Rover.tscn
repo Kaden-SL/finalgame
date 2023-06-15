@@ -67,16 +67,16 @@ rotation_edit_mode = 2
 engine_force = 58.51
 
 [node name="1" parent="Node3D/rover3/1_mr_rova/1" index="0"]
-transform = Transform3D(-0.996739, 4.97193e-07, 0.0806821, 5.47657e-07, 1, 6.0334e-07, -0.0806821, 6.45559e-07, -0.99674, 0, 0, 0)
+transform = Transform3D(-0.998935, 5.37425e-07, -0.0461302, 5.08572e-07, 1, 6.37205e-07, 0.0461301, 6.13066e-07, -0.998935, 0, 0, 0)
 
 [node name="2" parent="Node3D/rover3/1_mr_rova/2" index="0"]
-transform = Transform3D(-0.250631, -2.47653e-07, -0.968083, -1.31076e-07, 1, -2.21884e-07, 0.968083, 7.12813e-08, -0.250631, 0, 0, 0)
+transform = Transform3D(-0.896184, -2.60397e-07, 0.443682, -3.13826e-07, 1, -4.699e-08, -0.443682, -1.81351e-07, -0.896184, 0, 0, 0)
 
 [node name="3" parent="Node3D/rover3/1_mr_rova" index="3"]
 transform = Transform3D(-2.52233e-08, 0.333167, -2.27112e-08, -0.2593, -6.19219e-08, -2.46707, -0.293691, -6.63729e-09, 0.0308682, 1.68882, -5.32748, -0.00130901)
 
 [node name="3" parent="Node3D/rover3/1_mr_rova/3" index="0"]
-transform = Transform3D(-0.978576, -3.11983e-07, -0.205884, -2.8719e-07, 1, -1.50305e-07, 0.205884, -8.79569e-08, -0.978577, 0, 0, 0)
+transform = Transform3D(-0.984352, -3.11071e-07, -0.176209, -2.89852e-07, 1, -1.46159e-07, 0.176209, -9.27979e-08, -0.984353, 0, 0, 0)
 
 [node name="main_camera" parent="Node3D/rover3" index="4"]
 fov = 75.0
