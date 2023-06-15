@@ -1,12 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://dfd1sk8mdwf2q"]
 
-[ext_resource type="MeshLibrary" uid="uid://cn4fv3fsc10uk" path="res://GameAssets/GridMaps/jorgetest.tres" id="1_yfypl"]
+[ext_resource type="MeshLibrary" uid="uid://o4arp1eaua0c" path="res://GameAssets/GridMaps/meshlib.tres" id="1_ppln5"]
 
 [node name="TestGridmap" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("1_yfypl")
+mesh_library = ExtResource("1_ppln5")
 data = {
-"cells": PackedInt32Array(131071, 0, 0, 196607, 0, 1)
+"cells": PackedInt32Array(131071, 0, 0, 196607, 0, 1, 196605, 0, 1, 131075, 5, 2, 131074, 5, 2, 131073, 5, 2, 131072, 5, 2, 131076, 4, 7, 131077, 4, 7, 131077, 3, 7, 131078, 3, 7, 196594, 65534, 7, 196595, 65534, 7, 196596, 65534, 7, 196597, 65534, 7, 196598, 65534, 7, 196599, 65534, 7, 196599, 65533, 7, 196600, 65533, 7, 196600, 65534, 7, 196601, 65534, 7, 196602, 65534, 7, 196602, 65533, 7, 196603, 65534, 7, 196604, 65534, 7, 196605, 65534, 7, 196606, 65534, 7, 196596, 3, 5, 196597, 3, 5, 196598, 4, 5, 196599, 4, 5, 196604, 7, 5, 196605, 7, 5, 196606, 7, 5, 196606, 8, 5, 196598, 13, 6, 196599, 13, 6, 196600, 13, 6, 196601, 13, 6, 196601, 14, 6, 196602, 14, 6, 196603, 14, 6, 196604, 14, 6, 196605, 14, 6, 196605, 15, 6, 196605, 4, 3, 196604, 4, 3, 196603, 4, 4, 196603, 3, 4, 196602, 3, 4, 196594, 11, 1, 327682, 5, 1, 327688, 65533, 2, 327689, 65533, 6, 196611, 10, 6)
 }
-metadata/_editor_floor_ = Vector3(0, 2, 0)
+metadata/_editor_floor_ = Vector3(0, 3, 0)
