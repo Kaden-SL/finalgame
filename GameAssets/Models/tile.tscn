@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7my8vlvb1eyl"]
+[gd_scene load_steps=20 format=3 uid="uid://c7my8vlvb1eyl"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbx3erdfu5q4h" path="res://GameAssets/Meshes/platform3.obj" id="1_42tam"]
+[ext_resource type="ArrayMesh" uid="uid://dojmi2lfrvlnb" path="res://GameAssets/Meshes/drill.obj" id="2_73nfu"]
 [ext_resource type="ArrayMesh" uid="uid://cq8wkily0khu8" path="res://GameAssets/Meshes/platform2.obj" id="2_reaoc"]
 [ext_resource type="ArrayMesh" uid="uid://d328nq4m1nd2m" path="res://GameAssets/Meshes/flag.obj" id="3_xnvi7"]
+[ext_resource type="ArrayMesh" uid="uid://2tg1lqq5hv63" path="res://GameAssets/Meshes/vaccum.obj" id="4_2psk3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -14,11 +16,38 @@ albedo_color = Color(0.54902, 0.227451, 0.207843, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_isxtw"]
 points = PackedVector3Array(0.926237, 0.25, 0.926237, -0.956116, -0.25, -0.956116, -0.956116, -0.25, 0.956116, 0.956116, -0.25, -0.956116, -0.926237, 0.25, -0.926237, 0.956116, -0.25, 0.956116, -0.926237, 0.25, 0.926237, 0.926237, 0.25, -0.926237)
 
+[sub_resource type="BoxMesh" id="BoxMesh_rh223"]
+size = Vector3(2, 5, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e85um"]
+albedo_color = Color(0.54902, 0.227451, 0.207843, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kx020"]
+data = PackedVector3Array(-1, 2.5, 1, 1, 2.5, 1, -1, -2.5, 1, 1, 2.5, 1, 1, -2.5, 1, -1, -2.5, 1, 1, 2.5, -1, -1, 2.5, -1, 1, -2.5, -1, -1, 2.5, -1, -1, -2.5, -1, 1, -2.5, -1, 1, 2.5, 1, 1, 2.5, -1, 1, -2.5, 1, 1, 2.5, -1, 1, -2.5, -1, 1, -2.5, 1, -1, 2.5, -1, -1, 2.5, 1, -1, -2.5, -1, -1, 2.5, 1, -1, -2.5, 1, -1, -2.5, -1, 1, 2.5, 1, -1, 2.5, 1, 1, 2.5, -1, -1, 2.5, 1, -1, 2.5, -1, 1, 2.5, -1, -1, -2.5, 1, 1, -2.5, 1, -1, -2.5, -1, 1, -2.5, 1, 1, -2.5, -1, -1, -2.5, -1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hx6g"]
 albedo_color = Color(0.54902, 0.227451, 0.207843, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmbe7"]
 albedo_color = Color(0.905882, 0.490196, 0.0666667, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0yr3"]
+albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da08k"]
+albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ddu0"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lmkyk"]
+albedo_color = Color(0.337255, 0.337255, 0.337255, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2nmh"]
+albedo_color = Color(0.65098, 0.270588, 0.227451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dsvp"]
+albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -31,6 +60,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Default Tile/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_isxtw")
+
+[node name="Bottom Tile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62987, 0)
+visible = false
+mesh = SubResource("BoxMesh_rh223")
+surface_material_override/0 = SubResource("StandardMaterial3D_e85um")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bottom Tile"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bottom Tile/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kx020")
 
 [node name="Tile1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -46,32 +86,35 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0134158, 0, 0.0922493)
 shape = SubResource("ConvexPolygonShape3D_isxtw")
 
 [node name="Tile2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0)
 visible = false
 mesh = ExtResource("2_reaoc")
 surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
 surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tile2"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tile2/StaticBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0134158, 0, 0.0922493)
+visible = false
 shape = SubResource("ConvexPolygonShape3D_isxtw")
 
+[node name="Drill" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -1.7504, 0)
+visible = false
+mesh = ExtResource("2_73nfu")
+surface_material_override/0 = SubResource("StandardMaterial3D_k0yr3")
+
+[node name="Vacc" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.451086, -1.60228, 0.47272)
+mesh = ExtResource("4_2psk3")
+surface_material_override/0 = SubResource("StandardMaterial3D_da08k")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ddu0")
+surface_material_override/2 = SubResource("StandardMaterial3D_lmkyk")
+
 [node name="Flag" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, -2.34381, 0)
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, -2.36899, 0)
 mesh = ExtResource("3_xnvi7")
-surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
-surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
-
-[node name="Flag2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, -2.34381, 0)
-mesh = ExtResource("3_xnvi7")
-surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
-surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
-
-[node name="Flag3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, -2.34381, 0)
-mesh = ExtResource("3_xnvi7")
-surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
-surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
+surface_material_override/0 = SubResource("StandardMaterial3D_i2nmh")
+surface_material_override/2 = SubResource("StandardMaterial3D_8dsvp")

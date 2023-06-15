@@ -52,7 +52,7 @@ shape = SubResource("BoxShape3D_ipxsc")
 [node name="Cam Base" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Cam Base"]
-transform = Transform3D(1, 0, 0, 0, 0.9965, 0.0835908, 0, -0.0835908, 0.9965, 0, 0.329556, 2.49281)
+transform = Transform3D(1, 0, 0, 0, 0.9965, 0.0835908, 0, -0.0835908, 0.9965, 0, 0.329556, 4.01257)
 environment = SubResource("Environment_dcep5")
 current = true
 
