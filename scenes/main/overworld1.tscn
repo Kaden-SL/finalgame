@@ -111,44 +111,44 @@ action = "ui_right"
 [node name="Backgrounds Day" type="Node" parent="."]
 
 [node name="Closest" type="Sprite3D" parent="Backgrounds Day"]
-transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.69059, -1.80229)
+transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 290.454, 2.69059, -1.80229)
 texture = ExtResource("11_xsx5q")
 
 [node name="Closest2" type="Sprite3D" parent="Backgrounds Day"]
-transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 0, 11.3324, -31.5748)
+transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 290.454, 11.3324, -31.5748)
 texture = ExtResource("8_5lmfh")
 
 [node name="Closest3" type="Sprite3D" parent="Backgrounds Day"]
-transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 30.4989, -48.2843)
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 290.454, 30.4989, -48.2843)
 texture = ExtResource("9_oi4oj")
 
 [node name="Closest4" type="Sprite3D" parent="Backgrounds Day"]
-transform = Transform3D(1, 0, 0, 0, 1.82209, 0, 0, 0, 1, 0, 3.51354, -68.7356)
+transform = Transform3D(1, 0, 0, 0, 1.82209, 0, 0, 0, 1, 290.454, 3.51354, -68.7356)
 
 [node name="Closest5" type="Sprite3D" parent="Backgrounds Day"]
-transform = Transform3D(14.3915, 0, 0, 0, 12.483, 0, 0, 0, 0.994551, 0, 3.51354, -61.0186)
+transform = Transform3D(14.3915, 0, 0, 0, 12.483, 0, 0, 0, 0.994551, 290.454, 3.51354, -61.0186)
 texture = ExtResource("10_mno6i")
 
 [node name="Backgrounds Night" type="Node" parent="."]
 
 [node name="ClosestNight" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.69059, -1.80229)
+transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 215.858, 2.69059, -1.80229)
 texture = ExtResource("15_cxn22")
 
 [node name="Closest2Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 0, 11.3324, -31.5748)
+transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 215.858, 11.3324, -31.5748)
 texture = ExtResource("16_40u71")
 
 [node name="Closest3Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 30.4989, -48.2843)
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 215.858, 30.4989, -48.2843)
 texture = ExtResource("17_tq22u")
 
 [node name="Closest4Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(1, 0, 0, 0, 1.82209, 0, 0, 0, 1, 0, 3.51354, -68.7356)
+transform = Transform3D(1, 0, 0, 0, 1.82209, 0, 0, 0, 1, 215.858, 3.51354, -68.7356)
 texture = ExtResource("18_tauv4")
 
 [node name="Closest5Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(14.3915, 0, 0, 0, 12.483, 0, 0, 0, 0.994551, 0, 3.51354, -61.0186)
+transform = Transform3D(14.3915, 0, 0, 0, 12.483, 0, 0, 0, 0.994551, 215.858, 3.51354, -61.0186)
 texture = ExtResource("15_vxrhp")
 
 [node name="Sounds" type="Node" parent="."]
