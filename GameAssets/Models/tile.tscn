@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://c7my8vlvb1eyl"]
+[gd_scene load_steps=22 format=3 uid="uid://c7my8vlvb1eyl"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbx3erdfu5q4h" path="res://GameAssets/Meshes/platform3.obj" id="1_42tam"]
 [ext_resource type="ArrayMesh" uid="uid://dojmi2lfrvlnb" path="res://GameAssets/Meshes/drill.obj" id="2_73nfu"]
 [ext_resource type="ArrayMesh" uid="uid://cq8wkily0khu8" path="res://GameAssets/Meshes/platform2.obj" id="2_reaoc"]
 [ext_resource type="ArrayMesh" uid="uid://d328nq4m1nd2m" path="res://GameAssets/Meshes/flag.obj" id="3_xnvi7"]
 [ext_resource type="ArrayMesh" uid="uid://2tg1lqq5hv63" path="res://GameAssets/Meshes/vaccum.obj" id="4_2psk3"]
+[ext_resource type="ArrayMesh" uid="uid://clil1i0300okl" path="res://GameAssets/Meshes/platform1.obj" id="6_7qo5d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -48,6 +49,9 @@ albedo_color = Color(0.65098, 0.270588, 0.227451, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dsvp"]
 albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su736"]
+albedo_color = Color(0.454902, 0.0745098, 0, 1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -118,3 +122,8 @@ transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 
 mesh = ExtResource("3_xnvi7")
 surface_material_override/0 = SubResource("StandardMaterial3D_i2nmh")
 surface_material_override/2 = SubResource("StandardMaterial3D_8dsvp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.918578, 0, -0.395241, 0, 1, 0, 0.395241, 0, -0.918578, 0, 0, 0)
+mesh = ExtResource("6_7qo5d")
+surface_material_override/0 = SubResource("StandardMaterial3D_su736")
