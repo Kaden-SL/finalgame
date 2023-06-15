@@ -33,12 +33,14 @@ func _ready():
 	
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
+	print(mintime)
 	if 300<=mintime and mintime<=1200:
+		print('wut')
 		$"Backgrounds Night/ClosestNight".hide()
 		$"Backgrounds Night/Closest2Night".hide()
 		$"Backgrounds Night/Closest3Night".hide()
-		$"Backgrounds Night/Closest3Night".hide()
-		$"Backgrounds Night/Closest3Night".hide()
+		$"Backgrounds Night/Closest4Night".hide()
+		$"Backgrounds Night/Closest5Night".hide()
 	else:
 		$"Backgrounds Day/Closest2".hide()
 		$"Backgrounds Day/Closest3".hide()

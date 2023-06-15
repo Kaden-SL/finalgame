@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://m0wostg2ex24" path="res://scenes/subscenes/minigames/airSampleScenes/dust.tscn" id="2_7dwov"]
 [ext_resource type="PackedScene" uid="uid://dvm3kudtpgx1n" path="res://scenes/subscenes/minigames/drillSampleScenes/crosshair.tscn" id="2_15hpr"]
 [ext_resource type="PackedScene" uid="uid://bx6ar4obkcqem" path="res://scenes/subscenes/minigames/drillSampleScenes/drill.tscn" id="4_2huer"]
-[ext_resource type="Texture2D" uid="uid://bo75ppdibemtx" path="res://GameAssets/Textures/drillvacuum.png" id="5_e6iv4"]
+[ext_resource type="Texture2D" uid="uid://jo76g3tbspvm" path="res://GameAssets/Textures/drillvacuum.png" id="5_e6iv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33efb"]
 size = Vector2(752, 624)

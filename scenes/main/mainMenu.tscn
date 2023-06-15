@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://rnjj4su20fdu"]
 
 [ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
-[ext_resource type="Texture2D" uid="uid://dqdmjbdrudtwa" path="res://GameAssets/Textures/EarthGotREKD2.png" id="2_1bl6g"]
-[ext_resource type="Texture2D" uid="uid://bnhrhaj86utp3" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
-[ext_resource type="Texture2D" uid="uid://cn8g0puqowr0b" path="res://GameAssets/Textures/EarthGotREKD3.png" id="3_i3i1o"]
+[ext_resource type="Texture2D" uid="uid://eywse01h8j6q" path="res://GameAssets/Textures/EarthGotREKD2.png" id="2_1bl6g"]
+[ext_resource type="Texture2D" uid="uid://ckpgt528221pn" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
+[ext_resource type="Texture2D" uid="uid://cdbh0rlco5jbd" path="res://GameAssets/Textures/EarthGotREKD3.png" id="3_i3i1o"]
 
 [sub_resource type="Animation" id="Animation_tf24f"]
 length = 0.001
