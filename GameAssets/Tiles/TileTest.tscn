@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://gqjyyfmpejvo"]
+[gd_scene load_steps=6 format=3 uid="uid://gqjyyfmpejvo"]
+
+[ext_resource type="ArrayMesh" uid="uid://dqxnx75degwtc" path="res://GameAssets/Meshes/fixedplatform1.obj" id="1_tehbf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -16,6 +18,7 @@ size = Vector3(2, 4, 2)
 [node name="Node3D" type="Node3D"]
 
 [node name="Default Tile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.95663, 0, 0, 0, 1, 0, 0, 0, 2.99755, 0, 0, 0)
 mesh = SubResource("BoxMesh_ewiye")
 surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 
@@ -25,7 +28,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4c2qv")
 shape = SubResource("ConcavePolygonShape3D_g6llx")
 
 [node name="Event Tile" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.70876, 0.28764, 0.400418)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.10298, 0.28764, 0.400418)
+mesh = ExtResource("1_tehbf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Event Tile"]
 

@@ -89,8 +89,7 @@ offset_right = 270.5
 offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Click the rover or press ESC to open the menu.
-Click the left or right side of the screen or use the arrow keys to move."
+text = "Click the icon on the top right to begin  gathering data"
 horizontal_alignment = 1
 vertical_alignment = 1
 
