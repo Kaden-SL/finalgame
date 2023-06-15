@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://rnjj4su20fdu"]
+[gd_scene load_steps=14 format=3 uid="uid://rnjj4su20fdu"]
 
 [ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
 [ext_resource type="Texture2D" uid="uid://dqdmjbdrudtwa" path="res://GameAssets/Textures/EarthGotREKD2.png" id="2_1bl6g"]
@@ -99,6 +99,9 @@ _data = {
 "fade": SubResource("Animation_jleew")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_u8pyj"]
+font_size = 35
+
 [node name="mainMenu" type="Node2D"]
 script = ExtResource("1_bly3b")
 
@@ -165,10 +168,10 @@ vertical_alignment = 1
 
 [node name="titlebg" type="ColorRect" parent="gui"]
 layout_mode = 0
-offset_left = 512.0
+offset_left = 640.0
 offset_top = 192.0
-offset_right = 1088.0
-offset_bottom = 320.0
+offset_right = 960.0
+offset_bottom = 256.0
 color = Color(0, 0, 0, 0.392157)
 
 [node name="settings" type="Control" parent="gui"]
@@ -177,53 +180,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="volumeLabel" type="Label" parent="gui/settings"]
-z_index = 2
-layout_mode = 0
-offset_left = 741.0
-offset_top = 584.0
-offset_right = 854.0
-offset_bottom = 616.0
-text = "Volume : 100%"
-vertical_alignment = 1
-
-[node name="volumeBG" type="ColorRect" parent="gui/settings"]
-layout_mode = 0
-offset_left = 624.0
-offset_top = 576.0
-offset_right = 976.0
-offset_bottom = 664.0
-color = Color(0, 0, 0, 0.490196)
-
 [node name="fullscreenToggle" type="Button" parent="gui/settings"]
 z_index = 1
 layout_mode = 0
 offset_left = 704.0
-offset_top = 736.0
+offset_top = 696.0
 offset_right = 896.0
-offset_bottom = 800.0
+offset_bottom = 760.0
 text = "Toggle Fullscreen"
-
-[node name="HSlider" type="HSlider" parent="gui/settings"]
-layout_mode = 0
-offset_left = 637.0
-offset_top = 624.0
-offset_right = 957.0
-offset_bottom = 656.0
-value = 75.0
-tick_count = 5
-ticks_on_borders = true
-
-[node name="Label" type="Label" parent="gui"]
-layout_mode = 0
-offset_left = 544.0
-offset_top = 256.0
-offset_right = 1056.0
-offset_bottom = 320.0
-text = "A game by
-Kaden Sedmak-Locke, Jorge Gonzalez, Ellen Brannon, Chloe Liang"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="gui"]
 visible = false
@@ -239,7 +203,58 @@ libraries = {
 "": SubResource("AnimationLibrary_nfvvj")
 }
 
+[node name="credits" type="Control" parent="gui"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="gui/credits"]
+z_index = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 160.0
+offset_right = 1136.0
+offset_bottom = 576.0
+text = "Production Lead : Chloe Liang
+Testing Lead : Ellen Brannon
+Technology Lead : Kaden Sedmak-Locke
+Art Lead : Jorge Gonzalez
+
+Music made from 
+Art made from
+Using the Godot engine
+"
+label_settings = SubResource("LabelSettings_u8pyj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="gui/credits"]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 904.0
+color = Color(0, 0, 0, 0.588235)
+
+[node name="backButton" type="Button" parent="gui/credits"]
+z_index = 1
+layout_mode = 0
+offset_left = 704.0
+offset_top = 664.0
+offset_right = 896.0
+offset_bottom = 728.0
+text = "Return to Title"
+
+[node name="creditsButton" type="Button" parent="gui"]
+z_index = 2
+layout_mode = 0
+offset_left = 704.0
+offset_top = 512.0
+offset_right = 896.0
+offset_bottom = 576.0
+text = "Credits"
+
 [connection signal="pressed" from="gui/playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="gui/quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="gui/settings/fullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
-[connection signal="value_changed" from="gui/settings/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="gui/credits/backButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="gui/creditsButton" to="." method="_on_credits_button_pressed"]

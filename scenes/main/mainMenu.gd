@@ -39,3 +39,23 @@ func _on_h_slider_value_changed(value):
 	#set volume to value
 	var volumeLabel = "Volume : {value}%"
 	$gui/settings/volumeLabel.text = volumeLabel.format({"value": value})
+
+
+func _on_credits_button_pressed():
+	$gui/playButton.visible = false;
+	$gui/quitButton.visible = false;
+	$gui/titlebg.visible = false;
+	$gui/title.visible = false;
+	$gui/settings.visible = false;
+	$gui/creditsButton.visible = false;
+	$gui/credits.visible = true
+
+
+func _on_back_button_pressed():
+	$gui/playButton.visible = true;
+	$gui/quitButton.visible = true;
+	$gui/titlebg.visible = true;
+	$gui/title.visible = true;
+	$gui/settings.visible = true;
+	$gui/creditsButton.visible = true;
+	$gui/credits.visible = false
