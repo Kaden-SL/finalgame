@@ -54,3 +54,17 @@ Intro to the game is a cinematic that plays our "logo" with sound, then fades to
 Our main menu screen is interactive within all its elements.<br/>
 ## Choreography in code<br/>
 If you look at the intro.gd script, it utilzes timed events to trigger the fade, as well as play.<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+2d Art Assets (Parallax backgrounds, main menu background, minigame pixel art, navigation arrows and gear icon) - Made by Ellen Brannon using Clip Studio Paint EX
+Background music - made by Ellen Brannon using Anvil Studio
