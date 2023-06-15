@@ -57,7 +57,7 @@ mesh_library = ExtResource("3_3bg8v")
 data = {
 "cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 4, 0, 1)
 }
-metadata/_editor_floor_ = Vector3(0, 0, 0)
+metadata/_editor_floor_ = Vector3(0, -3, 0)
 
 [node name="airMinigame" parent="." instance=ExtResource("6_ldkkf")]
 visible = false
@@ -132,11 +132,11 @@ texture = ExtResource("10_mno6i")
 [node name="Backgrounds Night" type="Node" parent="."]
 
 [node name="ClosestNight" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 35.9278, 2.69059, -1.80229)
+transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 30.5783, 2.69059, -1.80229)
 texture = ExtResource("15_cxn22")
 
 [node name="Closest2Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 76.1203, 11.3324, -31.5748)
+transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 23.0064, 11.3324, -31.5748)
 texture = ExtResource("16_40u71")
 
 [node name="Closest3Night" type="Sprite3D" parent="Backgrounds Night"]
