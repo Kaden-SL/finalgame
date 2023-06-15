@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cu4wsmc7xbdy4" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
-[ext_resource type="Texture2D" uid="uid://xyxrsook0g5" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
+[ext_resource type="Texture2D" uid="uid://dt6ek4hb6jxl4" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
 [ext_resource type="AudioStream" uid="uid://bj0d5dab0xkie" path="res://GameAssets/Sounds/TheScreamsOfTheDamned.wav" id="11_b6lg1"]
 
 [sub_resource type="Animation" id="Animation_jleew"]
