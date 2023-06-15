@@ -54,7 +54,7 @@ transform = Transform3D(0.770658, -0.493762, 0.402846, 0, 0.632165, 0.774834, -0
 light_color = Color(0.996078, 0.831373, 0.54902, 1)
 
 [node name="Rover" parent="." instance=ExtResource("15_3pkgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.00904)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.97967)
 
 [node name="GridMap2" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)

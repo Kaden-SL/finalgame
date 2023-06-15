@@ -29,7 +29,9 @@ func _ready():
 #	right[1]+=1
 #	$GridMap2.set_cell_item(right,2)
 #	$GridMap2.set_cell_item(-right,2)
-	print($GridMap2.get_cell_item(startpose))
+
+	
+	
 	
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
@@ -53,8 +55,12 @@ func _ready():
 
 
 func _physics_process(delta):
+	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
+		var actualpos=floor($Rover.global_position)
+		actualpos[1]+=1
+		print(actualpos)
+		print($GridMap2.get_cell_item(actualpos))
 	
-#	print($GridMap2.get_cell_item($Rover.global_position))
 		
 	
 	#literally just what happens if you click the rover
