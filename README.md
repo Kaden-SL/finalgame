@@ -1,22 +1,22 @@
 # Team Members
-Kaden Sedmak-Locke
-Ellen Brannon
-Jorge Gonzalez
+Kaden Sedmak-Locke,
+Ellen Brannon,
+Jorge Gonzalez,
 Chloe Liang
 
 # Project Archive Rubric:
-## Link to deployed version of main game that works in mobile browser
-- Main Game Link: 
+## Link to deployed version of main game that works in mobile browser (Disclaimer IOS devices have issues with Itch HTML5 games, it functions perfectly on Android/Desktop however)
+- Main Game Link: https://fuzzyshaque.itch.io/cmpm120game
 ## Links to deployed, mobile-playable versions of all three prototypes
-- Cinematics Link: 
-- Core Gameplay Link: 
-- Scene Flow Link: 
+- Cinematics Link: https://fuzzyshaque.itch.io/cmpm120-game-cinematic-only
+- Core Gameplay Link: https://fuzzyshaque.itch.io/cmpm-120-game-core-gameplay-only
+- Scene Flow Link(Our scene flow is woven between the entire project, so it is exemplified by the full game): https://fuzzyshaque.itch.io/cmpm120game
 ## Explanation of theme
 - "Nearby in space, but distant in time" was explored in our project through a mars rover that has been left alone after humanity's demise. The mars rover continues doing its job analyzing samples, but the people it's supposed to be sending data to are long gone, and the experience is never-ending. 
 
 ## Explanation of selectable requirements attempted
 - Advanced Visual Assets: 3d model, mesh, and mesh animation for our rover, and the splash screen video
-- Procedural Graphics: 
+- Procedural Graphics: Upon re-run, every single tile changes variably and randomly except the event ones.
 - Alternate Control Device: Our background changes from day/night variants according to the user's system time
 
 ## Identifies all direct contributors and their roles
@@ -44,7 +44,7 @@ Chloe Liang
 - Clicking the gear icon opens the menu, which has a fullscreen button
 
 ## No mobile-specific technical issues blocking completability of the game
-
+- IOS devices have issues with Itch HTML5 games, it functions perfectly on Android however
 
 ## Player can learn controls from within the game while full screen
 - Buttons are apparent immediately and remain present while full-screened. You also get a text indicator to allow you to move
@@ -53,6 +53,7 @@ Chloe Liang
 - Music can be turned off from the menu, which you can access from the gear icon
 
 ## Music preference is remembered across gameplay sessions in new browser windows
+- The music preference is remembered between scenes, but not cached in individual browsers.
 
 ## Core gameplay can be reached within 1 minute
 - Yes
@@ -61,11 +62,11 @@ Chloe Liang
 - Players can complete all game elements within 10 minutes. The game intentionally doesn't have an end point, so there is no end screen, but all available options can be exhausted within 10 minutes. 
 
 ## Selectable requirement #1 is satisfied
-- Advanced Visual Assets: 
+- Advanced Visual Assets: We use custom meshes made in blender as well as animations.
 ## Selectable requirement #2 is satisfied
-- Procedural Graphics: 
+- Procedural Graphics: Upon re-run, every single tile changes variably and randomly except the event ones.
 ## Selectable requirement #3 is satisfied
-- Alternate Control Device: 
+- Alternate Control Device: The device's current time is used to determine if the game will be set in the night scene or the day scene.
 
 # Asset Credits
 - 3D rover model, mesh, textures, and animations made by Jorge Gonzalez in Blender
@@ -79,8 +80,11 @@ Chloe Liang
 - Gravel SFX made by Kaden Sedmak-Locke made in Videopad
 
 
+<br/>
+<br/>
+<br/>
 
-# OLDER README STUFF BELOW
+# SPECIFIC PROTOTYPE DETAILS
 
 
 
@@ -105,9 +109,9 @@ Godot is made almost entirely of prefabs, buttons, player, sprites, etc. Each of
 # Scene Flow<br/>
 
 ## Main Title<br/>
-It's there<br/>
+It's there, second scene overall<br/>
 ## Credits<br/>
-It's on the title, not really a point making a whole new scene for it<br/>
+We have a credits scene acessible through the main menu<br/>
 ## Gameplay<br/>
 There's the 3D overworld scene and 2d minigame scenes (not yet implemented)<br/>
 ## Menus<br/>
@@ -117,11 +121,7 @@ Godot uses signals in order to trigger things in other scenes, this is how the m
 ## Reachability<br/>
 All scenes are almost immediately reachable, the controls are simple insofar and clear instructions on the menu are given.<br/>
 ## Transitions<br/>
-none<br/>
-## Coordinated Fades<br/>
-none<br/>
-## Cross-Fades<br/>
-none<br/>
+Scenes and the cinematics have fade to blacks, as well as small screen dim menu transitions.<br/>
 <br/>
 <br/>
 <br/>
