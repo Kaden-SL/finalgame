@@ -5,7 +5,7 @@ Jorge Gonzalez,
 Chloe Liang
 
 # Project Archive Rubric:
-## Link to deployed version of main game that works in mobile browser (Disclaimer IOS devices have issues with Itch HTML5 games, it functions perfectly on Android However)
+## Link to deployed version of main game that works in mobile browser (Disclaimer IOS devices have issues with Itch HTML5 games, it functions perfectly on Android however)
 - Main Game Link: https://fuzzyshaque.itch.io/cmpm120game
 ## Links to deployed, mobile-playable versions of all three prototypes
 - Cinematics Link: https://fuzzyshaque.itch.io/cmpm120-game-cinematic-only
@@ -44,7 +44,7 @@ Chloe Liang
 - Clicking the gear icon opens the menu, which has a fullscreen button
 
 ## No mobile-specific technical issues blocking completability of the game
-- IOS devices have issues with Itch HTML5 games, it functions perfectly on Android However
+- IOS devices have issues with Itch HTML5 games, it functions perfectly on Android however
 
 ## Player can learn controls from within the game while full screen
 - Buttons are apparent immediately and remain present while full-screened. You also get a text indicator to allow you to move
