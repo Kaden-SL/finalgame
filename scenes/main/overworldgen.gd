@@ -53,12 +53,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
-		var actualpos=floor($Rover.global_position)
-		actualpos[1]+=1
-		actualpos[0]-=2
-		print(actualpos)
-		print($GridMap2.get_cell_item(actualpos))
 	
 		
 	

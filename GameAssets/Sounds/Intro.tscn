@@ -44,7 +44,7 @@ _data = {
 offset_right = 1920.0
 offset_bottom = 1088.0
 stream = ExtResource("1_blrg8")
-volume_db = -40.0
+volume_db = -20.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
