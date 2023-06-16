@@ -5,26 +5,26 @@
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="PackedScene" uid="uid://c24lqhtlmlj1j" path="res://scenes/main/drillMinigame.tscn" id="6_jcsge"]
 [ext_resource type="PackedScene" uid="uid://du25miaxbtdtg" path="res://scenes/main/airMinigame.tscn" id="6_ldkkf"]
-[ext_resource type="Texture2D" uid="uid://b1hjcj32hf0vx" path="res://GameAssets/Textures/left.png" id="7_kyum0"]
+[ext_resource type="Texture2D" uid="uid://dnmna388btulr" path="res://GameAssets/Textures/left.png" id="7_kyum0"]
 [ext_resource type="Texture2D" uid="uid://c7a12gf58618w" path="res://GameAssets/Textures/2-second_closest_bg.png" id="8_5lmfh"]
-[ext_resource type="Texture2D" uid="uid://cbjvep8a5ws3" path="res://GameAssets/Textures/leftpressed.png" id="8_oimym"]
-[ext_resource type="Texture2D" uid="uid://dscjrnu3spwh" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
+[ext_resource type="Texture2D" uid="uid://p4bgaby204w" path="res://GameAssets/Textures/leftpressed.png" id="8_oimym"]
+[ext_resource type="Texture2D" uid="uid://cu4wsmc7xbdy4" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
-[ext_resource type="Texture2D" uid="uid://ln6bw11od555" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
-[ext_resource type="Texture2D" uid="uid://blj5luh0t1je6" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
+[ext_resource type="Texture2D" uid="uid://dt6ek4hb6jxl4" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
+[ext_resource type="Texture2D" uid="uid://biofjqe0mskcp" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
 [ext_resource type="Texture2D" uid="uid://din7nfhnoy0qg" path="res://GameAssets/Textures/1-closest_bg_bigger.png" id="11_xsx5q"]
-[ext_resource type="Texture2D" uid="uid://c5cas3l4jf5v2" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
+[ext_resource type="Texture2D" uid="uid://bb7knhe58ontp" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Rover/Rover.tscn" id="15_3pkgi"]
-[ext_resource type="Texture2D" uid="uid://csqcyqm5x2u75" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
-[ext_resource type="Texture2D" uid="uid://ce0hpri05mdp2" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
+[ext_resource type="Texture2D" uid="uid://co1ga8ict62km" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
+[ext_resource type="Texture2D" uid="uid://d4iptn20q2qp4" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
 [ext_resource type="Texture2D" uid="uid://buvto0gqd2fmi" path="res://GameAssets/Textures/4-second_furthest_bg.png" id="16_wedno"]
-[ext_resource type="Texture2D" uid="uid://bf6rbdqv544d6" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
-[ext_resource type="Texture2D" uid="uid://bpk57330gmvoe" path="res://GameAssets/Textures/1-closest_bg_bigger_night.png" id="18_t75qy"]
-[ext_resource type="Texture2D" uid="uid://2lbss5iqo3c7" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
-[ext_resource type="AudioStream" uid="uid://crfkstno6byj3" path="res://GameAssets/Sounds/LittleMarsRoverSingsToThePast.mp3" id="23_pvn5g"]
+[ext_resource type="Texture2D" uid="uid://bajh67soimp3t" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
+[ext_resource type="Texture2D" uid="uid://bobxdthwwc4s0" path="res://GameAssets/Textures/1-closest_bg_bigger_night.png" id="18_t75qy"]
+[ext_resource type="Texture2D" uid="uid://cwum7xtb4ce2b" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
+[ext_resource type="AudioStream" uid="uid://dgtw5ap7si63n" path="res://GameAssets/Sounds/LittleMarsRoverSingsToThePast.mp3" id="23_pvn5g"]
 [ext_resource type="Script" path="res://scenes/main/overworldsounds.gd" id="23_v45hr"]
-[ext_resource type="AudioStream" uid="uid://bddu3c0kp0jnx" path="res://GameAssets/Sounds/click.wav" id="24_gn2p5"]
+[ext_resource type="AudioStream" uid="uid://chg16mp2aptcg" path="res://GameAssets/Sounds/click.wav" id="24_gn2p5"]
 
 [sub_resource type="Animation" id="Animation_jleew"]
 resource_name = "fade"
@@ -62,7 +62,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05855, -0.869237, 0.97967)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6482, 0)
 mesh_library = ExtResource("5_rep4o")
 data = {
-"cells": PackedInt32Array(13, 0, 0, 14, 0, 0, 15, 0, 0, 65531, 0, 1, 65530, 0, 1, -65538, 0, 1, -65540, 0, 1, -65539, 0, 1, -65541, 0, 1, -65542, 0, 1, 16, 0, 0, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1, -131064, 0, 1, -131063, 0, 1, -131062, 0, 1, -131061, 0, 1, -131060, 0, 1, -131059, 0, 1, -131058, 0, 1, -131057, 0, 1, -131056, 0, 1, -131055, 0, 1, -131054, 0, 1, -131053, 0, 1, -131052, 0, 1, -131051, 0, 1, -131050, 0, 1, -131049, 0, 1, -131048, 0, 1, -131047, 0, 1, -131046, 0, 1, -131045, 0, 1, -131044, 0, 1, -131043, 0, 1, -131042, 0, 1, -131041, 0, 1, -131040, 0, 1, -131039, 0, 1, -131038, 0, 1, -131037, 0, 1, -131036, 0, 1, -131035, 0, 1, -131034, 0, 1, -131033, 0, 1, -131032, 0, 1, -131031, 0, 1, -131030, 0, 1, -131029, 0, 1, -131028, 0, 1, -131027, 0, 1, -131026, 0, 1, -131025, 0, 1, -131024, 0, 1, -131023, 0, 1, -131022, 0, 1, -131021, 0, 1, -131020, 0, 1, -131019, 0, 1, -131018, 0, 1, -131017, 0, 1, -131016, 0, 1, -131015, 0, 1, -131014, 0, 1, -131013, 0, 1, -131012, 0, 1, -131011, 0, 1, -131010, 0, 1, -131009, 0, 1, -131008, 0, 1, -131007, 0, 1, -131006, 0, 1, -131005, 0, 1, -131004, 0, 1, -131003, 0, 1, -131002, 0, 1, -131001, 0, 1, -131000, 0, 1, -130999, 0, 1, -130998, 0, 1, -130997, 0, 1, -130996, 0, 1, -130995, 0, 1, -130994, 0, 1, -130993, 0, 1, -130992, 0, 1, -130991, 0, 1, -130990, 0, 1, -130989, 0, 1, -130988, 0, 1, -130987, 0, 1, -130986, 0, 1, -130985, 0, 1, -130984, 0, 1, -130983, 0, 1, -130982, 0, 1, -130981, 0, 1, -130980, 0, 1, -130979, 0, 1, -130978, 0, 1, -130977, 0, 1, 95, 0, 1, 94, 0, 1, 93, 0, 1, 92, 0, 1, 65534, 0, 2, 65535, 0, 3, 0, 0, 4, 65533, 0, 4, 65532, 0, 2, 1, 0, 4, 2, 0, 2, 3, 0, 2, 4, 0, 2)
+"cells": PackedInt32Array(13, 0, 0, 14, 0, 0, 15, 0, 0, 65531, 0, 1, 65530, 0, 1, -65538, 0, 1, -65540, 0, 1, -65539, 0, 1, -65541, 0, 1, -65542, 0, 1, 16, 0, 0, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1, -131064, 0, 1, -131063, 0, 1, -131062, 0, 1, -131061, 0, 1, -131060, 0, 1, -131059, 0, 1, -131058, 0, 1, -131057, 0, 1, -131056, 0, 1, -131055, 0, 1, -131054, 0, 1, -131053, 0, 1, -131052, 0, 1, -131051, 0, 1, -131050, 0, 1, -131049, 0, 1, -131048, 0, 1, -131047, 0, 1, -131046, 0, 1, -131045, 0, 1, -131044, 0, 1, -131043, 0, 1, -131042, 0, 1, -131041, 0, 1, -131040, 0, 1, -131039, 0, 1, -131038, 0, 1, -131037, 0, 1, -131036, 0, 1, -131035, 0, 1, -131034, 0, 1, -131033, 0, 1, -131032, 0, 1, -131031, 0, 1, -131030, 0, 1, -131029, 0, 1, -131028, 0, 1, -131027, 0, 1, -131026, 0, 1, -131025, 0, 1, -131024, 0, 1, -131023, 0, 1, -131022, 0, 1, -131021, 0, 1, -131020, 0, 1, -131019, 0, 1, -131018, 0, 1, -131017, 0, 1, -131016, 0, 1, -131015, 0, 1, -131014, 0, 1, -131013, 0, 1, -131012, 0, 1, -131011, 0, 1, -131010, 0, 1, -131009, 0, 1, -131008, 0, 1, -131007, 0, 1, -131006, 0, 1, -131005, 0, 1, -131004, 0, 1, -131003, 0, 1, -131002, 0, 1, -131001, 0, 1, -131000, 0, 1, -130999, 0, 1, -130998, 0, 1, -130997, 0, 1, -130996, 0, 1, -130995, 0, 1, -130994, 0, 1, -130993, 0, 1, -130992, 0, 1, -130991, 0, 1, -130990, 0, 1, -130989, 0, 1, -130988, 0, 1, -130987, 0, 1, -130986, 0, 1, -130985, 0, 1, -130984, 0, 1, -130983, 0, 1, -130982, 0, 1, -130981, 0, 1, -130980, 0, 1, -130979, 0, 1, -130978, 0, 1, -130977, 0, 1, 95, 0, 1, 94, 0, 1, 93, 0, 1, 92, 0, 1, 65534, 0, 2, 65535, 0, 3, 0, 0, 4, 65533, 0, 4, 65532, 0, 2, 1, 0, 4, 2, 0, 2, 3, 0, 2, 4, 0, 2, 65539, 0, 7, 65551, 0, 5, 65567, 0, 7, 65579, 0, 5, 65595, 0, 7, 65616, 0, 7, 65626, 0, 5)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
