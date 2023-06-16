@@ -11,6 +11,7 @@ signal unpaused
 signal node(id)
 const DRILL_NODE = 2
 const AIR_NODE = 3
+const DEFAULT_NODE = 0
 var data = 0
 var dataSent = 0
 var right = Vector3(0,0,0)
@@ -123,7 +124,7 @@ func _on_minigame_menu_minigame_abort():
 	actualpos[0]-=2
 	print("trying to adjust")
 	print(actualpos)
-	$GridMap2.set_cell_item(actualpos, 0)
+	$GridMap2.set_cell_item(actualpos, DEFAULT_NODE)
 
 
 func _on_timer_timeout():
