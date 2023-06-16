@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c7my8vlvb1eyl"]
+[gd_scene load_steps=21 format=3 uid="uid://cvno2yw10xmhi"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbx3erdfu5q4h" path="res://GameAssets/Meshes/platform3.obj" id="1_42tam"]
 [ext_resource type="ArrayMesh" uid="uid://dojmi2lfrvlnb" path="res://GameAssets/Meshes/drill.obj" id="2_73nfu"]
