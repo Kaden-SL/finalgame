@@ -5,7 +5,7 @@ Jorge Gonzalez,
 Chloe Liang
 
 # Project Archive Rubric:
-## Link to deployed version of main game that works in mobile browser (Disclaimer IOS devices have issues with Itch HTML5 games, it functions perfectly on Android however)
+## Link to deployed version of main game that works in mobile browser (Disclaimer IOS devices have issues with Itch HTML5 games, it functions perfectly on Android/Desktop however)
 - Main Game Link: https://fuzzyshaque.itch.io/cmpm120game
 ## Links to deployed, mobile-playable versions of all three prototypes
 - Cinematics Link: https://fuzzyshaque.itch.io/cmpm120-game-cinematic-only
