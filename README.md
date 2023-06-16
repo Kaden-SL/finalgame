@@ -6,6 +6,72 @@ Chloe Liang<br/>
 <br/>
 <br/>
 <br/>
+
+# Project Archive Rubric:<br/>
+## Link to deployed version of main game that works in mobile browser<br/>
+- Main Game Link: 
+## Links to deployed, mobile-playable versions of all three prototypes
+- Cinematics Link: 
+- Core Gameplay Link: 
+- Scene Flow Link: 
+## Explanation of theme
+
+
+## Explanation of selectable requirements attempted
+- Advanced Visual Assets: 3d model, mesh, and mesh animation for our rover, and the splash screen video
+- Procedural Graphics: 
+- Alternate Control Device: Our background changes from day/night variants according to the user's system time
+
+map gen, mesh/model and variable sounds
+
+
+## Identifies all direct contributors and their roles
+- Production Lead: Chloe Liang
+- Testing Lead: Ellen Brannon
+- Technology Lead: Kaden Sedmak-Locke
+- Art Lead: Jorge Gonzalez
+
+## Gives credit for all major upstream assets
+- 
+
+## Uses hand-typed textual program code
+- We coded using the GDScript language native to Godot. Any files with the .gd extension are written using GDScript. 
+
+## Repository shows contributions from several team members
+- Check our Github commit history
+
+## Repository shows most design changes with useful commit messages
+- Asset additions all say what they are adding
+
+## Playable using only touch-screen controls
+- On-screen arrows and settings/menu button 
+
+## Full-screen gameplay available on mobile browsers
+- Clicking the gear icon opens the menu and it has a fullscreen button
+
+## No mobile-specific technical issues blocking completability of the game
+
+
+## Player can learn controls from within the game while full screen
+- Buttons are apparent immediately and remain present while full-screened. You also get a textual indicator to allow you to move. 
+
+## Music can be turned off from inside of the game
+
+## Music preference is remembered across gameplay sessions in new browser windows
+
+## Core gameplay can be reached within 1 minute
+
+## Main progression can be completed within 10 minutes for new players experienced with related games
+
+## Selectable requirement #1 is satisfied
+
+## Selectable requirement #2 is satisfied
+
+## Selectable requirement #3 is satisfied
+
+
+
+
 # Core Gameplay<br/>
 ## Audio<br/>
 The game has a background track in the main level, as well as a crunchy gravel sound effect that plays when the player moves to the left or the right.
