@@ -11,7 +11,7 @@ signal unpaused
 signal node(id)
 const DRILL_NODE = 2
 const AIR_NODE = 3
-const DEFAULT_NODE = 0
+const DEFAULT_NODE = 4
 var data = 0
 var dataSent = 0
 var right = Vector3(0,0,0)
