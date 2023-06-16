@@ -15,15 +15,12 @@ Chloe Liang<br/>
 - Core Gameplay Link: 
 - Scene Flow Link: 
 ## Explanation of theme
-
+- "Nearby in space, but distant in time" was explored in our project through a mars rover that has been left alone after humanity's demise. The mars rover continues doing its job analyzing samples, but the people it's supposed to be sending data to are long gone, and the experience is never-ending. 
 
 ## Explanation of selectable requirements attempted
 - Advanced Visual Assets: 3d model, mesh, and mesh animation for our rover, and the splash screen video
 - Procedural Graphics: 
 - Alternate Control Device: Our background changes from day/night variants according to the user's system time
-
-map gen, mesh/model and variable sounds
-
 
 ## Identifies all direct contributors and their roles
 - Production Lead: Chloe Liang
@@ -32,7 +29,7 @@ map gen, mesh/model and variable sounds
 - Art Lead: Jorge Gonzalez
 
 ## Gives credit for all major upstream assets
-- 
+- View "Asset Credits" below
 
 ## Uses hand-typed textual program code
 - We coded using the GDScript language native to Godot. Any files with the .gd extension are written using GDScript. 
@@ -41,27 +38,30 @@ map gen, mesh/model and variable sounds
 - Check our Github commit history
 
 ## Repository shows most design changes with useful commit messages
-- Asset additions all say what they are adding
+- Check our Github commit history
 
 ## Playable using only touch-screen controls
 - On-screen arrows and settings/menu button 
 
 ## Full-screen gameplay available on mobile browsers
-- Clicking the gear icon opens the menu and it has a fullscreen button
+- Clicking the gear icon opens the menu, which has a fullscreen button
 
 ## No mobile-specific technical issues blocking completability of the game
 
 
 ## Player can learn controls from within the game while full screen
-- Buttons are apparent immediately and remain present while full-screened. You also get a textual indicator to allow you to move. 
+- Buttons are apparent immediately and remain present while full-screened. You also get a text indicator to allow you to move. 
 
 ## Music can be turned off from inside of the game
+- Music can be turned off from the menu, which you can access from the gear icon. 
 
 ## Music preference is remembered across gameplay sessions in new browser windows
 
 ## Core gameplay can be reached within 1 minute
+- Yes
 
 ## Main progression can be completed within 10 minutes for new players experienced with related games
+- Players can complete all game elements within 10 minutes. The game intentionally doesn't have an end point, so there is no end screen, but all available options can be exhausted within 10 minutes. 
 
 ## Selectable requirement #1 is satisfied
 
