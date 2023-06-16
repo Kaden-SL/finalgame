@@ -14,6 +14,7 @@ const buttonStrings = ["Upload\nData",
 signal unpause;
 signal minigameStart;
 signal quit;
+var game = 1;
 
 
 
@@ -30,7 +31,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	match game:
+		1:
+			$minigameStartButton.disabled = true
+		_:
+			$minigameStartButton.disabled = false
 
 
 
@@ -133,4 +138,11 @@ func _on_rover_out_node():
 	pass # delete this line and uncomment the above line when implemented
 
 
-
+func _on_main_node(id):
+	match id:
+		2: #drill node
+			game = 2
+		3: #air node
+			game = 3
+		_:
+			game = 1

@@ -8,6 +8,9 @@ var grid_steps= 50
 @export var airgame: PackedScene
 signal paused
 signal unpaused
+signal node(id)
+const DRILL_NODE = 2
+const AIR_NODE = 3
 var data = 0
 var dataSent = 0
 var right = Vector3(0,0,0)
@@ -27,10 +30,6 @@ func _ready():
 			$GridMap2.set_cell_item(startpose,2)
 		elif rngnum == 2:
 			$GridMap2.set_cell_item(startpose,3)
-
-
-	
-	
 	
 	var time = Time.get_time_dict_from_system()
 	var mintime = time['hour']*60+time['minute']
@@ -59,6 +58,16 @@ func _physics_process(delta):
 		actualpos[0]-=2
 		print(actualpos)
 		print($GridMap2.get_cell_item(actualpos))
+		match $GridMap2.get_cell_item(actualpos):
+			DRILL_NODE:
+				$notification.visible = true;
+				node.emit(DRILL_NODE)
+			AIR_NODE:
+				$notification.visible = true;
+				node.emit(AIR_NODE)
+			_:
+				$notification.visible = false;
+				node.emit(1)
 	
 		
 	
@@ -94,11 +103,10 @@ func _on_overworld_menu_unpause():
 
 
 func _on_overworld_menu_minigame_start():
-	var coinflip = randi() % 2;
-	if coinflip == 0:
+	if $overworldMenu.game == AIR_NODE:
 		var game = airgame.instantiate()
 		add_child(game)
-	else:
+	elif $overworldMenu.game == DRILL_NODE:
 		var game = drillgame.instantiate()
 		add_child(game)
 	
@@ -107,8 +115,15 @@ func _on_overworld_menu_minigame_start():
 
 
 func _on_minigame_menu_minigame_abort():
-	$minigameMenu.visible = false
 	$overworldMenu.visible = true
+	$notification.visible = false;
+	$overworldMenu.game = 1;
+	var actualpos=floor($Rover.global_position)
+	actualpos[1]+=1
+	actualpos[0]-=2
+	print("trying to adjust")
+	print(actualpos)
+	$GridMap2.set_cell_item(actualpos, 0)
 
 
 func _on_timer_timeout():

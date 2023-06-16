@@ -39,6 +39,7 @@ func _on_minigame_menu_minigame_abort():
 	if data1 >= 12 && data2 >= 12:
 		get_parent().data += (data1 + data2)
 	done.emit(0)
+	get_parent()._on_minigame_menu_minigame_abort()
 	queue_free()
 
 

@@ -56,4 +56,5 @@ func _on_minigame_menu_minigame_abort():
 	if data > 20:
 		get_parent().data += data
 	done.emit(0)
+	get_parent()._on_minigame_menu_minigame_abort()
 	queue_free()

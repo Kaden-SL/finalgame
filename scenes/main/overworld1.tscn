@@ -5,26 +5,26 @@
 [ext_resource type="PackedScene" uid="uid://dgxgml0ql3st1" path="res://scenes/main/overworldMenu.tscn" id="6_gikdm"]
 [ext_resource type="PackedScene" uid="uid://c24lqhtlmlj1j" path="res://scenes/main/drillMinigame.tscn" id="6_jcsge"]
 [ext_resource type="PackedScene" uid="uid://du25miaxbtdtg" path="res://scenes/main/airMinigame.tscn" id="6_ldkkf"]
-[ext_resource type="Texture2D" uid="uid://dnmna388btulr" path="res://GameAssets/Textures/left.png" id="7_kyum0"]
+[ext_resource type="Texture2D" uid="uid://b1hjcj32hf0vx" path="res://GameAssets/Textures/left.png" id="7_kyum0"]
 [ext_resource type="Texture2D" uid="uid://c7a12gf58618w" path="res://GameAssets/Textures/2-second_closest_bg.png" id="8_5lmfh"]
-[ext_resource type="Texture2D" uid="uid://p4bgaby204w" path="res://GameAssets/Textures/leftpressed.png" id="8_oimym"]
-[ext_resource type="Texture2D" uid="uid://cu4wsmc7xbdy4" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
+[ext_resource type="Texture2D" uid="uid://cbjvep8a5ws3" path="res://GameAssets/Textures/leftpressed.png" id="8_oimym"]
+[ext_resource type="Texture2D" uid="uid://dscjrnu3spwh" path="res://GameAssets/Textures/right.png" id="9_f4jbu"]
 [ext_resource type="Texture2D" uid="uid://b8lpcksn4m4e8" path="res://GameAssets/Textures/3-middle_bg.png" id="9_oi4oj"]
 [ext_resource type="Texture2D" uid="uid://dijpan02k428e" path="res://GameAssets/Textures/5-furthest_bg.png" id="10_mno6i"]
-[ext_resource type="Texture2D" uid="uid://dt6ek4hb6jxl4" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
-[ext_resource type="Texture2D" uid="uid://biofjqe0mskcp" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
+[ext_resource type="Texture2D" uid="uid://ln6bw11od555" path="res://GameAssets/Textures/rightpressed.png" id="10_nki3t"]
+[ext_resource type="Texture2D" uid="uid://blj5luh0t1je6" path="res://GameAssets/Textures/settingsgear.png" id="11_nfftf"]
 [ext_resource type="Texture2D" uid="uid://din7nfhnoy0qg" path="res://GameAssets/Textures/1-closest_bg_bigger.png" id="11_xsx5q"]
-[ext_resource type="Texture2D" uid="uid://bb7knhe58ontp" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
+[ext_resource type="Texture2D" uid="uid://c5cas3l4jf5v2" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Rover/Rover.tscn" id="15_3pkgi"]
-[ext_resource type="Texture2D" uid="uid://co1ga8ict62km" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
-[ext_resource type="Texture2D" uid="uid://d4iptn20q2qp4" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
+[ext_resource type="Texture2D" uid="uid://csqcyqm5x2u75" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
+[ext_resource type="Texture2D" uid="uid://ce0hpri05mdp2" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
 [ext_resource type="Texture2D" uid="uid://buvto0gqd2fmi" path="res://GameAssets/Textures/4-second_furthest_bg.png" id="16_wedno"]
-[ext_resource type="Texture2D" uid="uid://bajh67soimp3t" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
-[ext_resource type="Texture2D" uid="uid://bobxdthwwc4s0" path="res://GameAssets/Textures/1-closest_bg_bigger_night.png" id="18_t75qy"]
-[ext_resource type="Texture2D" uid="uid://cwum7xtb4ce2b" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
-[ext_resource type="AudioStream" uid="uid://dgtw5ap7si63n" path="res://GameAssets/Sounds/LittleMarsRoverSingsToThePast.mp3" id="23_pvn5g"]
+[ext_resource type="Texture2D" uid="uid://bf6rbdqv544d6" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
+[ext_resource type="Texture2D" uid="uid://bpk57330gmvoe" path="res://GameAssets/Textures/1-closest_bg_bigger_night.png" id="18_t75qy"]
+[ext_resource type="Texture2D" uid="uid://2lbss5iqo3c7" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
+[ext_resource type="AudioStream" uid="uid://crfkstno6byj3" path="res://GameAssets/Sounds/LittleMarsRoverSingsToThePast.mp3" id="23_pvn5g"]
 [ext_resource type="Script" path="res://scenes/main/overworldsounds.gd" id="23_v45hr"]
-[ext_resource type="AudioStream" uid="uid://chg16mp2aptcg" path="res://GameAssets/Sounds/click.wav" id="24_gn2p5"]
+[ext_resource type="AudioStream" uid="uid://bddu3c0kp0jnx" path="res://GameAssets/Sounds/click.wav" id="24_gn2p5"]
 
 [sub_resource type="Animation" id="Animation_jleew"]
 resource_name = "fade"
@@ -91,7 +91,6 @@ offset_right = 270.5
 offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Click the icon on the top right to begin  gathering data"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -191,6 +190,18 @@ libraries = {
 "": SubResource("AnimationLibrary_nfvvj")
 }
 
+[node name="notification" type="Label" parent="."]
+visible = false
+offset_left = 576.0
+offset_top = 376.0
+offset_right = 1024.0
+offset_bottom = 448.0
+text = "Data Collection Possible
+Open Menu (top right corner) to Collect Data"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="node" from="." to="overworldMenu" method="_on_main_node"]
 [connection signal="minigameStart" from="overworldMenu" to="." method="_on_overworld_menu_minigame_start"]
 [connection signal="quit" from="overworldMenu" to="." method="_on_overworld_menu_quit"]
 [connection signal="unpause" from="overworldMenu" to="." method="_on_overworld_menu_unpause"]
