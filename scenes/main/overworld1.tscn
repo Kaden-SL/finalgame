@@ -16,11 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://din7nfhnoy0qg" path="res://GameAssets/Textures/1-closest_bg_bigger.png" id="11_xsx5q"]
 [ext_resource type="Texture2D" uid="uid://bb7knhe58ontp" path="res://GameAssets/Textures/settingsgearpressed.png" id="12_xgu7k"]
 [ext_resource type="PackedScene" uid="uid://dcq4awtwaie88" path="res://GameAssets/Rover/Rover.tscn" id="15_3pkgi"]
-[ext_resource type="Texture2D" uid="uid://bntb2ahaocsar" path="res://GameAssets/Textures/1-closest_bg_night.png" id="15_cxn22"]
 [ext_resource type="Texture2D" uid="uid://co1ga8ict62km" path="res://GameAssets/Textures/5-furthest_bg_night.png" id="15_vxrhp"]
 [ext_resource type="Texture2D" uid="uid://d4iptn20q2qp4" path="res://GameAssets/Textures/2-second_closest_bg_night.png" id="16_40u71"]
 [ext_resource type="Texture2D" uid="uid://buvto0gqd2fmi" path="res://GameAssets/Textures/4-second_furthest_bg.png" id="16_wedno"]
 [ext_resource type="Texture2D" uid="uid://bajh67soimp3t" path="res://GameAssets/Textures/3-middle_bg_night.png" id="17_tq22u"]
+[ext_resource type="Texture2D" uid="uid://bobxdthwwc4s0" path="res://GameAssets/Textures/1-closest_bg_bigger_night.png" id="18_t75qy"]
 [ext_resource type="Texture2D" uid="uid://cwum7xtb4ce2b" path="res://GameAssets/Textures/4-second_furthest_bg_night.png" id="18_tauv4"]
 [ext_resource type="AudioStream" uid="uid://dgtw5ap7si63n" path="res://GameAssets/Sounds/LittleMarsRoverSingsToThePast.mp3" id="23_pvn5g"]
 
@@ -146,11 +146,11 @@ texture = ExtResource("11_xsx5q")
 [node name="Backgrounds Night" type="Node" parent="."]
 
 [node name="ClosestNight" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 30.5783, 2.69059, -1.80229)
-texture = ExtResource("15_cxn22")
+transform = Transform3D(1.86007, 0, 0, 0, 1, 0, 0, 0, 1, 100.737, 2.69059, -1.80229)
+texture = ExtResource("18_t75qy")
 
 [node name="Closest2Night" type="Sprite3D" parent="Backgrounds Night"]
-transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 23.0064, 11.3324, -31.5748)
+transform = Transform3D(3.8443, 0, 0, 0, 3.8443, 0, 0, 0, 3.8443, 52.3269, 11.057, -31.4087)
 texture = ExtResource("16_40u71")
 
 [node name="Closest3Night" type="Sprite3D" parent="Backgrounds Night"]

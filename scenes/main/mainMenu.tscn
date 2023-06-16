@@ -191,7 +191,7 @@ text = "Toggle Fullscreen"
 
 [node name="ColorRect" type="ColorRect" parent="gui"]
 visible = false
-modulate = Color(0, 0, 0, 1)
+modulate = Color(0, 0, 0, 0.1)
 z_index = 10
 layout_mode = 0
 offset_right = 1600.0
@@ -233,7 +233,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 904.0
-color = Color(0, 0, 0, 0.588235)
+color = Color(0, 0, 0, 1)
 
 [node name="backButton" type="Button" parent="gui/credits"]
 z_index = 1

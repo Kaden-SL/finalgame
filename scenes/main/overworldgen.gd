@@ -37,7 +37,6 @@ func _ready():
 	var mintime = time['hour']*60+time['minute']
 	print(mintime)
 	if 300<=mintime and mintime<=1200:
-		print('wut')
 		$"Backgrounds Night/ClosestNight".hide()
 		$"Backgrounds Night/Closest2Night".hide()
 		$"Backgrounds Night/Closest3Night".hide()
@@ -58,6 +57,7 @@ func _physics_process(delta):
 	if Input. is_action_pressed("ui_right") or Input. is_action_pressed("ui_left"):
 		var actualpos=floor($Rover.global_position)
 		actualpos[1]+=1
+		actualpos[0]-=2
 		print(actualpos)
 		print($GridMap2.get_cell_item(actualpos))
 	
