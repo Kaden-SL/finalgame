@@ -59,16 +59,6 @@ func _physics_process(delta):
 		actualpos[0]-=2
 		print(actualpos)
 		print($GridMap2.get_cell_item(actualpos))
-		match $GridMap2.get_cell_item(actualpos):
-			DRILL_NODE:
-				$notification.visible = true;
-				node.emit(DRILL_NODE)
-			AIR_NODE:
-				$notification.visible = true;
-				node.emit(AIR_NODE)
-			_:
-				$notification.visible = false;
-				node.emit(1)
 	
 		
 	
@@ -104,10 +94,11 @@ func _on_overworld_menu_unpause():
 
 
 func _on_overworld_menu_minigame_start():
-	if $overworldMenu.game == AIR_NODE:
+	var coinflip = randi_range(0, 1)
+	if coinflip == 0:
 		var game = airgame.instantiate()
 		add_child(game)
-	elif $overworldMenu.game == DRILL_NODE:
+	else:
 		var game = drillgame.instantiate()
 		add_child(game)
 	
@@ -119,12 +110,12 @@ func _on_minigame_menu_minigame_abort():
 	$overworldMenu.visible = true
 	$notification.visible = false;
 	$overworldMenu.game = 1;
-	var actualpos=floor($Rover.global_position)
-	actualpos[1]+=1
-	actualpos[0]-=2
-	print("trying to adjust")
-	print(actualpos)
-	$GridMap2.set_cell_item(actualpos, DEFAULT_NODE)
+	#var actualpos=floor($Rover.global_position)
+	#actualpos[1]+=1
+	#actualpos[0]-=2
+	#print("trying to adjust")
+	#print(actualpos)
+	#$GridMap2.set_cell_item(actualpos, DEFAULT_NODE)
 
 
 func _on_timer_timeout():

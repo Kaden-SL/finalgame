@@ -31,11 +31,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	match game:
-		1:
-			$minigameStartButton.disabled = true
-		_:
-			$minigameStartButton.disabled = false
+	pass
 
 
 
