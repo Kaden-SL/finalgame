@@ -66,7 +66,7 @@ Chloe Liang
 ## Selectable requirement #2 is satisfied
 - Procedural Graphics: Upon re-run, every single tile changes variably and randomly except the event ones.
 ## Selectable requirement #3 is satisfied
-- Alternate Control Device: The devices current time is used to determine if the game will be set in the night scene or the day scene.
+- Alternate Control Device: The device's current time is used to determine if the game will be set in the night scene or the day scene.
 
 # Asset Credits
 - 3D rover model, mesh, textures, and animations made by Jorge Gonzalez in Blender
