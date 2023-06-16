@@ -16,7 +16,7 @@ Chloe Liang
 
 ## Explanation of selectable requirements attempted
 - Advanced Visual Assets: 3d model, mesh, and mesh animation for our rover, and the splash screen video
-- Procedural Graphics: 
+- Procedural Graphics: Upon re-run, every single tile changes variably and randomly except the event ones.
 - Alternate Control Device: Our background changes from day/night variants according to the user's system time
 
 ## Identifies all direct contributors and their roles
