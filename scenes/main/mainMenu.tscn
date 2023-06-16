@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://rnjj4su20fdu"]
+[gd_scene load_steps=15 format=3 uid="uid://rnjj4su20fdu"]
 
 [ext_resource type="Script" path="res://scenes/main/mainMenu.gd" id="1_bly3b"]
 [ext_resource type="Texture2D" uid="uid://eywse01h8j6q" path="res://GameAssets/Textures/EarthGotREKD2.png" id="2_1bl6g"]
 [ext_resource type="Texture2D" uid="uid://ckpgt528221pn" path="res://GameAssets/Textures/EarthGotREKD.png" id="2_43jns"]
 [ext_resource type="Texture2D" uid="uid://cdbh0rlco5jbd" path="res://GameAssets/Textures/EarthGotREKD3.png" id="3_i3i1o"]
+[ext_resource type="AudioStream" uid="uid://chg16mp2aptcg" path="res://GameAssets/Sounds/click.wav" id="5_7pusn"]
 
 [sub_resource type="Animation" id="Animation_tf24f"]
 length = 0.001
@@ -252,6 +253,9 @@ offset_top = 512.0
 offset_right = 896.0
 offset_bottom = 576.0
 text = "Credits"
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_7pusn")
 
 [connection signal="pressed" from="gui/playButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="gui/quitButton" to="." method="_on_quit_button_pressed"]

@@ -14,21 +14,20 @@ var right = Vector3(0,0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var rng = RandomNumberGenerator.new()
+
 	var startpose= Vector3(0,0,0)
-#	for x in range(0,10):
-#		startpose[0]=x
-#		$GridMap2.set_cell_item(startpose,0)
-#		$GridMap2.set_cell_item(-startpose,0)
-#	right = startpose
-#	right[0]+=1
-#	$GridMap2.set_cell_item(right,3)
-#	$GridMap2.set_cell_item(-right,3)
-#	right[0]+=1
-#	$GridMap2.set_cell_item(right,2)
-#	$GridMap2.set_cell_item(-right,2)
-#	right[1]+=1
-#	$GridMap2.set_cell_item(right,2)
-#	$GridMap2.set_cell_item(-right,2)
+	for x in range(-4,92):
+		startpose[0]=x
+		rng.randomize()
+		var rngnum = rng.randi_range(0, 2)
+		if rngnum == 0:
+			$GridMap2.set_cell_item(startpose,4)
+		elif rngnum == 1:
+			$GridMap2.set_cell_item(startpose,2)
+		elif rngnum == 2:
+			$GridMap2.set_cell_item(startpose,3)
+
 
 	
 	
