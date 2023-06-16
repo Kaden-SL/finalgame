@@ -90,7 +90,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0134158, 0, 0.0922493)
 shape = SubResource("ConvexPolygonShape3D_isxtw")
 
 [node name="Tile2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.01, 0)
+transform = Transform3D(0.38907, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.01, 0)
 mesh = ExtResource("2_reaoc")
 surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
 surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
