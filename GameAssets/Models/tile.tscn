@@ -1,11 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://c7my8vlvb1eyl"]
+[gd_scene load_steps=21 format=3 uid="uid://c7my8vlvb1eyl"]
 
 [ext_resource type="ArrayMesh" uid="uid://bbx3erdfu5q4h" path="res://GameAssets/Meshes/platform3.obj" id="1_42tam"]
 [ext_resource type="ArrayMesh" uid="uid://dojmi2lfrvlnb" path="res://GameAssets/Meshes/drill.obj" id="2_73nfu"]
 [ext_resource type="ArrayMesh" uid="uid://cq8wkily0khu8" path="res://GameAssets/Meshes/platform2.obj" id="2_reaoc"]
+[ext_resource type="ArrayMesh" uid="uid://01v3ym6qdfu5" path="res://GameAssets/Meshes/platform1new.obj" id="3_26vil"]
 [ext_resource type="ArrayMesh" uid="uid://d328nq4m1nd2m" path="res://GameAssets/Meshes/flag.obj" id="3_xnvi7"]
 [ext_resource type="ArrayMesh" uid="uid://2tg1lqq5hv63" path="res://GameAssets/Meshes/vaccum.obj" id="4_2psk3"]
-[ext_resource type="ArrayMesh" uid="uid://clil1i0300okl" path="res://GameAssets/Meshes/platform1.obj" id="6_7qo5d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ewiye"]
 size = Vector3(2, 0.5, 2)
@@ -50,9 +50,6 @@ albedo_color = Color(0.65098, 0.270588, 0.227451, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dsvp"]
 albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su736"]
-albedo_color = Color(0.454902, 0.0745098, 0, 1)
-
 [node name="Node3D" type="Node3D"]
 
 [node name="Default Tile" type="MeshInstance3D" parent="."]
@@ -90,7 +87,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0134158, 0, 0.0922493)
 shape = SubResource("ConvexPolygonShape3D_isxtw")
 
 [node name="Tile2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.38907, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.01, 0)
+transform = Transform3D(0.403486, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.01, 0)
+visible = false
 mesh = ExtResource("2_reaoc")
 surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
 surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
@@ -98,6 +96,18 @@ surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
 [node name="StaticBody3D" type="StaticBody3D" parent="Tile2"]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Tile2/StaticBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.02, 0)
+shape = SubResource("ConvexPolygonShape3D_isxtw")
+
+[node name="Tile3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.38577, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.01, -0.0818999)
+mesh = ExtResource("3_26vil")
+surface_material_override/0 = SubResource("StandardMaterial3D_2hx6g")
+surface_material_override/1 = SubResource("StandardMaterial3D_vmbe7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile3"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Tile3/StaticBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.02, 0)
 shape = SubResource("ConvexPolygonShape3D_isxtw")
 
@@ -121,9 +131,3 @@ visible = false
 mesh = ExtResource("3_xnvi7")
 surface_material_override/0 = SubResource("StandardMaterial3D_i2nmh")
 surface_material_override/2 = SubResource("StandardMaterial3D_8dsvp")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.918578, 0, -0.395241, 0, 1, 0, 0.395241, 0, -0.918578, 0, 0, 0)
-visible = false
-mesh = ExtResource("6_7qo5d")
-surface_material_override/0 = SubResource("StandardMaterial3D_su736")

@@ -16,6 +16,7 @@ func _process(delta):
 
 
 func _on_play_button_pressed():
+	$click.play()
 	$gui/ColorRect.visible = true
 	$gui/ColorRect/AnimationPlayer.play("fade")
 	await get_tree().create_timer(1).timeout
@@ -23,10 +24,12 @@ func _on_play_button_pressed():
 
 
 func _on_quit_button_pressed():
+	$click.play()
 	get_tree().quit()
 
 
 func _on_fullscreen_toggle_pressed():
+	$click.play()
 	if(DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED) :
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN);
 	elif(DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN) :
@@ -42,6 +45,7 @@ func _on_h_slider_value_changed(value):
 
 
 func _on_credits_button_pressed():
+	$click.play()
 	$gui/playButton.visible = false;
 	$gui/quitButton.visible = false;
 	$gui/titlebg.visible = false;
@@ -52,6 +56,7 @@ func _on_credits_button_pressed():
 
 
 func _on_back_button_pressed():
+	$click.play()
 	$gui/playButton.visible = true;
 	$gui/quitButton.visible = true;
 	$gui/titlebg.visible = true;

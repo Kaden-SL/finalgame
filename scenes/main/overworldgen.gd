@@ -22,13 +22,12 @@ func _ready():
 		rng.randomize()
 		var rngnum = rng.randi_range(0, 2)
 		if rngnum == 0:
-			$GridMap2.set_cell_item(startpose,0)
+			$GridMap2.set_cell_item(startpose,4)
 		elif rngnum == 1:
 			$GridMap2.set_cell_item(startpose,2)
 		elif rngnum == 2:
 			$GridMap2.set_cell_item(startpose,3)
 
-##	
 
 	
 	
